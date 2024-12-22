@@ -1,0 +1,143 @@
+/* Main Container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 3rem auto;
+}
+.login-right a {
+  margin-left: 15rem;
+}
+
+/* Left Section */
+.login-left {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #0078ff, #005bb5);
+}
+
+.login-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-right {
+  flex: 1;
+  padding: 40px 30px;
+}
+
+.login-right h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+}
+
+.login-btn {
+  padding: 12px;
+  margin-top: 25px;
+  background-color: #0078ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 599px) {
+  /* Small devices: Mobile */
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .login-left {
+    display: none; /* Hide the left section on small devices */
+  }
+
+  .login-right {
+    padding: 20px;
+  }
+
+  .login-right h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  /* Medium devices: Tablets */
+  .login-container {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  .login-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .login-right {
+    flex: 1;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large devices: Desktops */
+  .login-container {
+    flex-direction: row;
+    max-width: 900px;
+  }
+
+  .login-left {
+    display: flex;
+  }
+
+  .login-right {
+    padding: 50px 40px;
+  }
+
+  .login-right h1 {
+    font-size: 2rem;
+  }
+}
