@@ -1,0 +1,144 @@
+/* General Styling */
+.developer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h1{
+  color:white;
+}
+
+/* Common Developer Card Styling */
+.developer-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.developer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.developer-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #d1c4e9;
+}
+
+.developer-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.developer-role {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.developer-email {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.developer-linkedin {
+  text-decoration: none;
+  color: #6c63ff;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.developer-linkedin:hover {
+  color: #4e4ac7;
+  text-decoration: underline;
+}
+
+/* Layout for Top and Bottom Developers */
+.top-developers,
+.bottom-developers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .developer-card {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .developer-name {
+    font-size: 1.1rem;
+  }
+
+  .developer-role,
+  .developer-email {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-developers,
+  .bottom-developers {
+    gap: 15px;
+  }
+
+  .developer-card {
+    width: 200px;
+  }
+
+  .developer-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .developer-name {
+    font-size: 1rem;
+  }
+
+  .developer-role,
+  .developer-email {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .developer-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .developer-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .developer-name {
+    font-size: 1rem;
+  }
+}

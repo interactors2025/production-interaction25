@@ -1,0 +1,102 @@
+/* About Page Styling */
+.about-container {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #1a2a45, #3060a3);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.about-content {
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    border-radius: 12px; /* Softer corners */
+    max-width: 850px;
+    width: 100%;
+    padding: 30px 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-content:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #0d47a1; /* Rich blue for the header */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    color: #546e7a; /* Softer grayish blue for description */
+    margin: 0;
+}
+
+.about-body {
+    line-height: 1.8;
+}
+
+.about-section {
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+    color: #1565c0; /* Blue with a touch of vibrancy */
+    border-left: 6px solid #1e88e5; /* Accent border */
+    padding-left: 12px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #37474f; /* Darker gray for readability */
+    background: #f7fbff; /* Subtle blue background */
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section p:hover {
+    background: #e1f5fe; /* Brighter blue hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Text for Content */
+.about-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #78909c; /* Muted gray-blue for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px 15px;
+    }
+
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}

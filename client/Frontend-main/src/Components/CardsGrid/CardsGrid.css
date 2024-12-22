@@ -1,0 +1,59 @@
+/* Overall container to center everything */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color:#ddd;
+    text-align: center;
+  }
+  
+  /* Grid container for cards */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 80px; /* Space between cards */
+    justify-content: center; /* Center the grid horizontally */
+  }
+  
+  /* Card styling */
+  .card1 {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add hover effect to the card */
+  .card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Typography for card title */
+  .card1 h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Typography for card description */
+  .card1 p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
