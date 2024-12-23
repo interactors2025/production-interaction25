@@ -12,10 +12,11 @@ import About from "./Components/About/About";
 import Gallery from "./Components/Gallery/Gallery";
 import Login from "./Components/Login/Login";
 import CoordinatorSection from "./Components/CoordinatorSection/CoordinatorSection";
-import Schedule from "./Components/Schedule/Schedule"
+import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
-import Form from "./Components/Form/Form"
+import Form from "./Components/Form/Form";
+import OtherForm from "./Components/others/form";
 
 // A wrapper component to conditionally render Header and Navbar
 const Layout = ({ children }) => {
@@ -29,10 +30,10 @@ const Layout = ({ children }) => {
   return (
     <>
       {!isRegisterPage && !isLoginPage && !isCoordinator}
-      {!isRegisterPage && !isLoginPage && <Navbar /> }
+      {!isRegisterPage && !isLoginPage && <Navbar />}
 
       {children}
-      { <Footer /> }
+      {<Footer />}
     </>
   );
 };
@@ -43,14 +44,15 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/coordinator" element={<CoordinatorSection />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
           <Route path="/Form" element={<Form />} />
+          <Route path="/other" element={<OtherForm />} />
         </Routes>
       </Layout>
     </Router>
