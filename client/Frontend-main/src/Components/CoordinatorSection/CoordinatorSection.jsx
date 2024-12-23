@@ -1,4 +1,3 @@
-
 import "./CoordinatorSection.css";
 import img1 from "../../assets/img/img1.jpg";
 import img2 from "../../assets/img/img2.jpg";
@@ -6,6 +5,8 @@ import img3 from "../../assets/img/img3.jpg";
 import img4 from "../../assets/img/img4.jpg";
 import img5 from "../../assets/img/img5.jpg";
 import img6 from "../../assets/img/img6.jpg";
+import img7 from "../../assets/img/img7.jpg";
+import img8 from "../../assets/img/img8.jpg";
 
 // Coordinator Data
 const coordinators = [
@@ -14,7 +15,19 @@ const coordinators = [
   { id: 3, name: "Michael Brown", description: "Marketing Lead", image: img3 },
   { id: 4, name: "Shree Bhai", description: "Stage Coordinator", image: img4 },
   { id: 5, name: "Balwadkar Bhau", description: "Publicity Head", image: img5 },
-  { id: 6, name: "Aporva Sheth", description: "Technical Lead", image: img6 },
+  { id: 6, name: "Apurv Sheth", description: "Technical Lead", image: img6 },
+  {
+    id: 7,
+    name: "Shreyas Sonu Devkar",
+    description: "Principal's Pal",
+    image: img7,
+  },
+  {
+    id: 8,
+    name: "Chaitanya Ghodke",
+    description: "Graphics Head",
+    image: img8,
+  },
 ];
 
 const CoordinatorSection = () => {
