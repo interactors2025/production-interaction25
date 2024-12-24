@@ -34,6 +34,7 @@ const Header = () => {
               <br />
               RASHTRIYA UCHCHATAR SHIKSHA ABHIYAN (RUSA)
             </h3>
+            <h3>NATIONAL CONFERENCE ON DATA SCIENCE AND ITS CHALLENGES</h3>
           </div>
         </div>
       </header>
