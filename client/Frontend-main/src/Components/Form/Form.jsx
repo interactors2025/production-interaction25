@@ -1,346 +1,431 @@
-import { useState } from 'react'
+import React, { useState } from "react";
 import {
+  Box,
   TextField,
-  Button,
-  FormControl,
+  Checkbox,
   FormControlLabel,
+  FormGroup,
   Radio,
   RadioGroup,
-  Checkbox,
+  Button,
   Typography,
-  Box
-} from '@mui/material'
-import './Form.css'
-import CancelButton from './CancelButton'
+  Grid,
+  Paper,
+} from "@mui/material";
+import qr1 from "../../assets/img/qr100.png";
+import qr2 from "../../assets/img/qr200.png";
+import qr3 from "../../assets/img/qr300.png";
+import qr4 from "../../assets/img/qr400.png";
 
-const Form = () => {
-
-
-
-
-
+export default function Form() {
+  const qrCodes = {
+    100: qr1,
+    200: qr2,
+    300: qr3,
+    400: qr4,
+  };
 
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    mobile: '',
-    email: '',
-    collegeName: '',
-    section: '',
-    state: '',
-    country: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    collegeName: "",
+    country: "",
+    state: "",
+    section: "PG",
+    role: "student",
     Events: [],
     amount: 0,
     Image: null,
-    status: '',
-    createdAt: '',
-    deleted: '',
-    role: '' // Default role is 'student'
-  })
-  console.log(formData)
+  });
 
-  const [errors, setErrors] = useState({})
-  const [success, setSuccess] = useState('')
+  const [errors, setErrors] = useState({});
+  const [newerrors, setNewErrors] = useState({});
+  const [qrCode, setQrCode] = useState(null);
 
-  const events1 = [
-    { name: 'National Conference', amount: 100 },
-    { name: 'Brain Battle (Day1)', amount: 100 },
-    { name: 'Media Splash(Day1)', amount: 100 },
-    { name: 'Wisdom War(Day1)', amount: 100 },
-    { name: 'Hack in the Dark(Day2)', amount: 100 },
-    { name: 'Spark the Idea(Day2)', amount: 100 },
-    { name: 'Gold Rush Quest(Day2)', amount: 100 }
-  ]
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "Image") {
+      setFormData((prev) => ({ ...prev, [name]: files[0] }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
 
-  const qrCodes = {
-    100: 'path_to_qr_for_100',
-    200: 'path_to_qr_for_200',
-    300: 'path_to_qr_for_300',
-    400: 'path_to_qr_for_400',
-    500: 'path_to_qr_for_500',
-    600: 'path_to_qr_for_600',
-    700: 'path_to_qr_for_700'
-  }
-
-  // Handle role change
-  const handleRoleChange = event => {
-    setFormData({ ...formData, role: event.target.value })
-  }
-
-  // Handle input field changes
-  const handleChange = field => event => {
-    setFormData({ ...formData, [field]: event.target.value })
-  }
-
-  // Handle event selection
-  const handleEventChange = event => {
-    const selectedEvents = formData.Events.includes(event.name)
-      ? formData.Events.filter(e => e !== event.name)
-      : [...formData.Events, event.name]
-
-    const totalAmount = selectedEvents.reduce(
-      (total, eventName) =>
-        total + events1.find(e => e.name === eventName).amount,
-      0
-    )
-
-    setFormData({
-      ...formData,
-      Events: selectedEvents,
-      amount: totalAmount
-    })
-  }
-
-  // Validate the form
-  const validateForm = () => {
-    const errors = {}
-    if (!formData.firstName) errors.firstName = 'First name is required.'
-    if (!formData.lastName) errors.lastName = 'Last name is required.'
-    if (!formData.mobile || !/^\d{10}$/.test(formData.mobile))
-      errors.mobile = 'Valid 10-digit mobile number is required.'
-
-    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email))
-      errors.email = 'Valid email address is required.'
-
-    if (!formData.collegeName) errors.collegeName = 'College name is required.'
-    if (!formData.state) errors.state = 'State is required.'
-    if (!formData.country) errors.country = 'Country is required.'
-
-    if (!formData.section) errors.section = 'Please select your section.'
-
-    if (formData.Events.length === 0)
-      errors.events = 'Please select at least one event.'
-    setErrors(errors)
-    return Object.keys(errors).length === 0
-  }
-
-  // Handle form submission
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
-  
-    if (!validateForm()) return;
-  
-    const apiUrl = formData.role === 'staff'
-      ? 'http://localhost:6789/api/v1/register-staff'
-      : 'http://localhost:6789/api/v1/register';
-  
-    const formDataToSend = new FormData();
-    formDataToSend.append('firstName', formData.firstName);
-    formDataToSend.append('lastName', formData.lastName);
-    formDataToSend.append('mobile', formData.mobile);
-    formDataToSend.append('email', formData.email);
-    formDataToSend.append('collegeName', formData.collegeName);
-    formDataToSend.append('state', formData.state);
-    formDataToSend.append('country', formData.country);
-    formDataToSend.append('role', formData.role);
-  
-    if (formData.role === 'student') {
-      formDataToSend.append('section', formData.section);
-      formDataToSend.append('Events', JSON.stringify(formData.Events));
-      formDataToSend.append('amount', formData.amount);
+      if (name === "role") {
+        setFormData((prev) => ({
+          ...prev,
+          Events: [],
+          amount: 0,
+        }));
+        setQrCode(value === "teacher" ? qrCodes[200] : null);
+      }
     }
-  
-    if (formData.Image) {
-      formDataToSend.append('Image', formData.Image); // Include the file if present
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+
+    setFormData((prev) => {
+      const updatedEvents = checked
+        ? [...prev.Events, value]
+        : prev.Events.filter((event) => event !== value);
+
+      const updatedAmount = updatedEvents.length * 100;
+      setQrCode(qrCodes[updatedAmount] || null);
+
+      return { ...prev, Events: updatedEvents, amount: updatedAmount };
+    });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.firstName.trim())
+      newErrors.firstName = "First Name is required.";
+    if (!formData.lastName.trim())
+      newErrors.lastName = "Last Name is required.";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid.";
     }
-  
-    console.log('Submitting form:', formDataToSend.entries());
-  
-    try {
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        body: formDataToSend, // Use FormData
-      });
-  
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Form submitted successfully:', result);
-        setSuccess('Form submitted successfully!');
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = "Mobile number is required.";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Mobile number must be 10 digits.";
+    }
+    if (!formData.collegeName.trim())
+      newErrors.collegeName = "College Name is required.";
+    if (!formData.country.trim()) newErrors.country = "Country is required.";
+    if (!formData.state.trim()) newErrors.state = "State is required.";
+    if (formData.role === "student" && formData.Events.length === 0) {
+      newErrors.Events = "At least one event must be selected.";
+    }
+    if (!formData.Image) newErrors.Image = "Image is required.";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validate()) {
+      return;
+    }
+
+    const apiEndpoint =
+      formData.role === "student"
+        ? `${import.meta.env.VITE_APP_BASE_URL}/api/v1/register`
+        : `${import.meta.env.VITE_APP_BASE_URL}/api/v1/register-staff`;
+
+    const formDataToSubmit = new FormData();
+    for (const key in formData) {
+      if (key === "Image" && formData[key]) {
+        formDataToSubmit.append(key, formData[key]);
+      } else if (key === "Events") {
+        formDataToSubmit.append(key, JSON.stringify(formData[key]));
       } else {
-        console.error('Form submission failed:', response.statusText);
+        formDataToSubmit.append(key, formData[key]);
+      }
+    }
+
+    try {
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        body: formDataToSubmit,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert("Form submitted successfully!");
+      } else {
+        alert("Form submission failed!");
       }
     } catch (error) {
-      console.error('Error submitting the form:', error);
+      setNewErrors(error);
     }
   };
 
   return (
-    <form className='form-container' onSubmit={handleSubmit}>
-      <FormControl sx={{ marginBottom: 2 }}>
-        <CancelButton />
-        <Typography variant='h4' mb={1}>
+    <Paper
+      elevation={3}
+      sx={{
+        maxWidth: { xs: "90%", sm: "80%", md: "600px" },
+        mx: "auto",
+        p: 3,
+        backgroundColor: "white",
+        borderRadius: 2,
+      }}
+    >
+      <Box component="form" onSubmit={handleSubmit}>
+        <Typography variant="h4" textAlign="center" gutterBottom>
           Registration Form
         </Typography>
 
-        <Typography variant='h6' mb={1}>
-          Role:
-        </Typography>
-        <RadioGroup row value={formData.role} onChange={handleRoleChange}>
-          <FormControlLabel
-            value='student'
-            control={<Radio />}
-            label='Student'
-          />
-          <FormControlLabel value='staff' control={<Radio />} label='Staff' />
-        </RadioGroup>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="First Name"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.firstName}
+              helperText={errors.firstName}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="Last Name"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.lastName}
+              helperText={errors.lastName}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.email}
+              helperText={errors.email}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="Mobile"
+              type="tel"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.mobile}
+              helperText={errors.mobile}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              label="College Name"
+              name="collegeName"
+              value={formData.collegeName}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.collegeName}
+              helperText={errors.collegeName}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="Country"
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.country}
+              helperText={errors.country}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="State"
+              name="state"
+              value={formData.state}
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.state}
+              helperText={errors.state}
+            />
+          </Grid>
 
-        <TextField
-          label='First Name'
-          value={formData.firstName}
-          onChange={handleChange('firstName')}
-          fullWidth
-          margin='normal'
-          error={!!errors.firstName}
-          helperText={errors.firstName}
-          sx={{ marginBottom: 2 }}
-        />
-        <TextField
-          label='Last Name'
-          value={formData.lastName}
-          onChange={handleChange('lastName')}
-          fullWidth
-          margin='normal'
-          error={!!errors.lastName}
-          helperText={errors.lastName}
-        />
-        <TextField
-          label='Mobile'
-          value={formData.mobile}
-          onChange={handleChange('mobile')}
-          fullWidth
-          margin='normal'
-          error={!!errors.mobile}
-          helperText={errors.mobile}
-          sx={{ marginBottom: 2 }}
-        />
-        <TextField
-          label='Email'
-          value={formData.email}
-          onChange={handleChange('email')}
-          fullWidth
-          margin='normal'
-          error={!!errors.email}
-          helperText={errors.email}
-          sx={{ marginBottom: 2 }}
-        />
-
-        <TextField
-          fullWidth
-          label='College Name'
-          value={formData.collegeName}
-          onChange={handleChange('collegeName')}
-          error={!!errors.collegeName}
-          helperText={errors.collegeName}
-          sx={{ marginBottom: 2 }}
-          margin='normal'
-        />
-        <TextField
-          fullWidth
-          label='Country'
-          value={formData.country}
-          onChange={handleChange('country')}
-          error={!!errors.country}
-          helperText={errors.country}
-          sx={{ marginBottom: 2 }}
-          margin='normal'
-        />
-        <TextField
-          fullWidth
-          label='State'
-          value={formData.state}
-          onChange={handleChange('state')}
-          error={!!errors.state}
-          helperText={errors.state}
-          sx={{ marginBottom: 2 }}
-          margin='normal'
-        />
-
-        {formData.role === 'student' && (
-          <>
-            <Typography variant='h6' mb={1}>
-              Section:
-            </Typography>
+          <Grid item xs={12}>
+            <Typography variant="subtitle1">User Type:</Typography>
             <RadioGroup
               row
-              value={formData.section}
-              onChange={handleChange('section')}
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
             >
-              <FormControlLabel value='UG' control={<Radio />} label='UG' />
-              <FormControlLabel value='PG' control={<Radio />} label='PG' />
+              <FormControlLabel
+                value="student"
+                control={<Radio />}
+                label="Student"
+              />
+              <FormControlLabel
+                value="teacher"
+                control={<Radio />}
+                label="Teacher"
+              />
             </RadioGroup>
+          </Grid>
 
-            {errors.section && (
-              <Typography color='error' variant='body2'>
-                {errors.section}
-              </Typography>
-            )}
+          {formData.role === "student" && (
+            <>
+              <Grid item xs={12}>
+                <Typography variant="subtitle1">Education Level:</Typography>
+                <RadioGroup
+                  row
+                  name="section"
+                  value={formData.section}
+                  onChange={handleChange}
+                >
+                  <FormControlLabel value="UG" control={<Radio />} label="UG" />
+                  <FormControlLabel value="PG" control={<Radio />} label="PG" />
+                </RadioGroup>
+              </Grid>
 
-            <Typography variant='h6' mb={1}>
-              Events:
-            </Typography>
-            <div className='checkbox-container'>
-              {events1.map(event => (
-                <FormControlLabel
-                  key={event.name}
-                  control={
-                    <Checkbox
-                      checked={formData.Events.includes(event.name)}
-                      onChange={() => handleEventChange(event)}
-                      error={!!errors.state}
-                      helperText={errors.state}
-                      sx={{ marginBottom: 2 }}
-                      margin='normal'
-                    />
-                  }
-                  label={event.name}
+              <Grid item xs={12}>
+                <Typography variant="subtitle1">Events:</Typography>
+                <FormGroup row>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value="event1"
+                        checked={formData.Events.includes("event1")}
+                        onChange={handleCheckboxChange}
+                      />
+                    }
+                    label="Event 1"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value="event2"
+                        checked={formData.Events.includes("event2")}
+                        onChange={handleCheckboxChange}
+                      />
+                    }
+                    label="Event 2"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value="event3"
+                        checked={formData.Events.includes("event3")}
+                        onChange={handleCheckboxChange}
+                      />
+                    }
+                    label="Event 3"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        value="event4"
+                        checked={formData.Events.includes("event4")}
+                        onChange={handleCheckboxChange}
+                      />
+                    }
+                    label="Event 4"
+                  />
+                </FormGroup>
+                {errors.Events && (
+                  <Typography color="error" variant="body2">
+                    {errors.Events}
+                  </Typography>
+                )}
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  label="Amount"
+                  name="amount"
+                  value={formData.amount}
+                  InputProps={{ readOnly: true }}
+                  fullWidth
                 />
-              ))}
-            </div>
-            <Typography variant='h6' mt={2} mb={2}>
-              Total Amount: ₹{formData.amount}
-              {formData.amount > 0 && (
-                <Box className='qr-code-container'>
-                  <img src={qrCodes[formData.amount]} alt='QR Code' />
-                </Box>
-              )}
-            </Typography>
-          </>
-        )}
+              </Grid>
+            </>
+          )}
 
-        {formData.role === 'staff' && (
-          <>
-            <Typography variant='h6' mt={2} mb={2}>
-              National Conference Amount: ₹200
-              <Box className='qr-code-container'>
-                <img src={qrCodes[200]} alt='QR Code' />
+          {formData.role === "teacher" && (
+            <Grid item xs={12}>
+              <Typography variant="subtitle1">Events:</Typography>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    value="national_conference"
+                    checked={formData.Events.includes("national_conference")}
+                    onChange={handleCheckboxChange}
+                  />
+                }
+                label="National Conference"
+              />
+            </Grid>
+          )}
+          {qrCode && (
+            <Grid
+              item
+              xs={12}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mt: 2,
+              }}
+            >
+              <Box
+                sx={{
+                  width: "300px",
+                  height: "400px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  border: "1px solid #ddd",
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src={qrCode}
+                  alt="QR Code"
+                  style={{ width: "100%", height: "100%" }}
+                />
               </Box>
-            </Typography>
-          </>
-        )}
+            </Grid>
+          )}
 
-        <Button variant='contained' component='label' sx={{ marginBottom: 2 }}>
-          Upload Screenshot
-          <input
-            type='file'
-            hidden
-            onChange={e =>
-              setFormData({ ...formData, Image: e.target.files[0] })
-            }
-          />
-        </Button>
+          <Grid item xs={12}>
+            <label>Upload Transaction Screenshot</label>
+            <input
+              label="Upload Image"
+              type="file"
+              name="Image"
+              onChange={handleChange}
+              fullWidth
+              required
+              error={!!errors.Image}
+              helperText={errors.Image}
+            />
+          </Grid>
 
-        <Button variant='contained' color='primary' type='submit'>
-          Submit
-        </Button>
-
-        {success && (
-          <Typography variant='h6' color='green' className='success-message'>
-            {success}
-          </Typography>
-        )}
-      </FormControl>
-    </form>
-  )
+          <Grid item xs={12}>
+            <Box mt={3}>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+              >
+                Submit
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    </Paper>
+  );
 }
-
-export default Form
