@@ -11,7 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Gallery from "./Components/Gallery/Gallery";
 import Login from "./Components/Login/Login";
-import CoordinatorSection from "./Components/CoordinatorSection/CoordinatorSection";
+// import CoordinatorSection from "./Components/CoordinatorSection/CoordinatorSection";
 import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
   // Check if the current path is not "/register"
   const isRegisterPage = location.pathname === "/register";
   const isLoginPage = location.pathname === "/login";
-  const isCoordinator = location.pathname === "/coordinator";
+  // const isCoordinator = location.pathname === "/coordinator";
 
   return (
     <>
-      {!isRegisterPage && !isLoginPage && !isCoordinator}
+      {!isRegisterPage && !isLoginPage}
       {!isRegisterPage && !isLoginPage && <Navbar />}
 
       {children}
@@ -47,7 +47,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/coordinator" element={<CoordinatorSection />} />
+          {/* <Route path="/coordinator" element={<CoordinatorSection />} /> */}
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
