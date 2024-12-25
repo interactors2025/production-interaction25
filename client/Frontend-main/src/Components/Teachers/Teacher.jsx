@@ -1,4 +1,6 @@
 import "./Teacher.css";
+import Coordinators from "../Coordinators/Coordinators";
+import CardsGrid from "../CardsGrid/CardsGrid";
 import HOD_Maam from '../../assets/img/HOD_Maam.webp';
 import Ranjana_Mam from '../../assets/img/Ranjana_Mam.webp';
 import Satish_Sir from '../../assets/img/Satish_Sir.webp';
@@ -17,7 +19,7 @@ const Teacher = () => {
         },
         {
           name: "Dr.Deepak Kumbhar",
-          image: '',
+          image: Ranjana_Mam,
           contact: "",
         },
         {
@@ -161,7 +163,10 @@ const Teacher = () => {
   ];
 
   return (
-    <div className="teacher-container">
+    <>
+    <Coordinators />
+    <CardsGrid/>
+      <div className="teacher-container">
       <h1 className="header1">INTERACTION COORDINATORS 2025</h1>
       <div className="event-grid">
         {events.map((event, index) => (
@@ -186,6 +191,7 @@ const Teacher = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
