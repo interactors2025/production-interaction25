@@ -15,7 +15,7 @@ import Login from "./Components/Login/Login";
 import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
-import Form from "./Components/Form/Form";
+//import Form from "./Components/Form/Form";
 import OtherForm from "./Components/others/form";
 
 // A wrapper component to conditionally render Header and Navbar
@@ -47,12 +47,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/coordinator" element={<CoordinatorSection />} /> */}
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
-          <Route path="/Form" element={<Form />} />
-          <Route path="/other" element={<OtherForm />} />
+          <Route path="/Form" element={<OtherForm />} />
         </Routes>
       </Layout>
     </Router>
