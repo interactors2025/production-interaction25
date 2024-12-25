@@ -24,7 +24,7 @@ const Header = () => {
               Ganeshkhind, Pune-16.
             </h1>
             <h3>
-              Affiliated to, Savitribai Phule Pune University NAAC A Grade,
+              Affiliated to Savitribai Phule Pune University NAAC with A+ Grade,
               DST-Fist, DBT Star College
             </h3>
             <h2 className="grants">GRANTS TO STRENGTHEN COLLEGES SCHEME OF</h2>
