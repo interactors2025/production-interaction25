@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="logoI">
-        <Link to="/">INTERACTION</Link>
+        <Link to="/">NCI 25</Link>
       </div>
 
       {/* Hamburger Icon */}
@@ -32,22 +32,17 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/about" onClick={toggleMenu}>
-            About
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link to="/Teacher" onClick={toggleMenu}>
+           Coordinators
           </Link>
         </li>
         <li>
           <Link to="/Schedule" onClick={toggleMenu}>
             Schedule
-          </Link>
-        </li>
-        <li>
-          <Link to="/coordinator" onClick={toggleMenu}>
-            Coordinator
-          </Link>
-        </li>
-        <li>
-          <Link to="/Teacher" onClick={toggleMenu}>
-            Teachers
           </Link>
         </li>
         <li>
@@ -58,6 +53,11 @@ const Navbar = () => {
         <li>
           <Link to="/gallery" onClick={toggleMenu}>
             Gallery
+          </Link>
+        </li>
+        <li>
+          <Link to="/admin" onClick={toggleMenu}>
+            Admin
           </Link>
         </li>
         <li>
