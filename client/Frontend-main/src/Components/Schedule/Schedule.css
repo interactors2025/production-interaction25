@@ -1,0 +1,241 @@
+/* General Event Schedule Styling */
+.event-schedule {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1a2a45, #3060a3);
+  color: #fff;
+  padding: 40px 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.event-schedule h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  background: #ff416c;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(255, 65, 108, 0.4);
+}
+
+/* Event Details Section */
+.event-details {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.event-details h2 {
+  font-size: 1.5em;
+  color: #ff416c;
+  margin-bottom: 20px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+.event-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.event-info {
+  text-align: left;
+}
+
+.event-info h3 {
+  font-size: 1.2em;
+  color: #ff416c;
+  margin: 0 0 5px;
+}
+
+.event-info p {
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+/* Schedule Section */
+.schedule {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.schedule h2 {
+  font-size: 1.5em;
+  color: #ff416c;
+  margin-bottom: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-item .time {
+  font-weight: 600;
+  color: #ff416c;
+}
+
+.schedule-item .activity {
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+/* Download Button */
+.download-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.download-button .button {
+  display: inline-block;
+  background: #ff416c;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(255, 65, 108, 0.4);
+  transition: all 0.3s ease;
+}
+
+.download-button .button:hover {
+  background: #ff4b2b;
+  box-shadow: 0 10px 20px rgba(255, 75, 43, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+
+/* Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .event-schedule h1 {
+    font-size: 2em;
+  }
+
+  .tabs button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .event {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .event-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .event-info h3 {
+    font-size: 1.1em;
+  }
+
+  .schedule h2 {
+    font-size: 1.3em;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 5px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .event-schedule h1 {
+    font-size: 1.8em;
+  }
+
+  .tabs button {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .event-details {
+    text-align: center;
+  }
+
+  .event-details h2,
+  .schedule h2 {
+    font-size: 1.2em;
+  }
+
+  .event-info h3 {
+    font-size: 1em;
+  }
+
+  .schedule-item .time,
+  .schedule-item .activity {
+    font-size: 0.8em;
+  }
+
+  .download-button .button {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+}
