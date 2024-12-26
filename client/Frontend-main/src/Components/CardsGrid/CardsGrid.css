@@ -1,0 +1,133 @@
+/* CardsGrid.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  justify-content: center;
+  align-items: start;
+}
+
+.card1 {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card1 img {
+  width: 70%; /* Medium-sized images */
+  max-width: 200px; /* Cap the size for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px;
+  border-radius: 5px; /* Slight rounding for a professional look */
+}
+
+.card1 h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 15px 0 10px;
+}
+
+.card1 p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Still two cards per row for medium screens */
+    gap: 20px;
+  }
+
+  .card1 {
+    padding: 20px;
+  }
+
+  .card1 h3 {
+    font-size: 1.3rem;
+  }
+
+  .card1 p {
+    font-size: 0.95rem;
+  }
+
+  .card1 img {
+    width: 70%; /* Slightly smaller images for medium screens */
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row on tablets */
+    gap: 15px;
+  }
+
+  .card1 {
+    padding: 15px;
+  }
+
+  .card1 img {
+    width: 70%;
+    max-width: 150px; /* Medium-sized image adjustment */
+  }
+
+  .card1 h3 {
+    font-size: 1.2rem;
+  }
+
+  .card1 p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* One card per row on mobile screens */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card1 {
+    padding: 15px;
+  }
+
+  .card1 img {
+    width: 60%;
+    max-width: 120px; /* Smaller images for mobile */
+  }
+
+  .card1 h3 {
+    font-size: 1rem;
+  }
+
+  .card1 p {
+    font-size: 0.85rem;
+  }
+}

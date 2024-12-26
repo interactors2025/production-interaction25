@@ -1,0 +1,78 @@
+/* General Container Styling */
+.sponsor-logos {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.sponsor-logos h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.logo-container {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+  grid-gap: 50px; /* Larger spacing between items for desktop */
+  justify-content: center;
+  padding: 20px; /* Adds space around the container */
+}
+
+/* Individual Logo Item */
+.logo-item {
+  max-width: 200px; /* Increased size for desktop */
+  height: 200px; /* Fixed height for consistency */
+  background-color: white;
+  border: 2px solid #ddd; /* Slightly thicker border for better definition */
+  border-radius: 15px; /* Softer rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin:30px;
+}
+
+.logo-item:hover {
+  transform: scale(1.1); /* Slightly larger hover effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.logo-item img {
+  width: 100%; /* Adjust image size */
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+@media (max-width: 1024px) {
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    grid-gap: 40px; /* Adjust spacing for smaller screens */
+  }
+  .logo-item {
+    max-width: 180px; /* Slightly smaller size */
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for narrow screens */
+    grid-gap: 30px; /* Reduced spacing */
+  }
+  .logo-item {
+    max-width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr); /* Same as above for mobile */
+    grid-gap: 20px; /* Compact spacing for small screens */
+  }
+  .logo-item {
+    max-width: 140px;
+    height: 140px;
+  }
+}

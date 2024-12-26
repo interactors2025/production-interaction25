@@ -1,0 +1,97 @@
+.teacher-container {
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 2rem;
+}
+
+.header1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 2rem; /* Spacing between cards */
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: Restrict maximum width */
+}
+
+.event-card {
+  background: white;
+  border: 8px solid orange;
+  border-radius: 10px;
+  padding: 1rem;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center cards horizontally */
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.teachers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 1rem;
+}
+
+.teacher {
+  text-align: center;
+}
+
+.teacher-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.teacher-contact {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr; /* Single card per row */
+  }
+
+  .teachers {
+    grid-template-columns: 1fr; /* Single teacher card per row */
+  }
+
+  .teacher-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header1 {
+    font-size: 1.5rem;
+  }
+
+  .event-card {
+    padding: 0.8rem;
+  }
+
+  .event-title {
+    font-size: 1.2rem;
+  }
+}
