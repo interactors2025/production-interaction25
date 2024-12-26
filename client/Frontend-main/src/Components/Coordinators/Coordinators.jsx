@@ -1,34 +1,34 @@
 import "./Coordinators.css";
-import Principal_Sir from '../../assets/img/Principal_Sir.webp';
-import Vice_principal from '../../assets/img/Vice_principal.webp';
-import HOD_Maam from '../../assets/img/HOD_Maam.webp';
-import Dipali_Maam from '../../assets/img/Dipali_Maam.webp';
 
 const coordinators = [
   {
     name: "Dr. Sanjay Kharat",
     title: "Principal",
-    image: Principal_Sir,
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146732/Principal_Sir_oib2zf.png",
     alt: "Principal_Sir",
   },
   {
     name: "Dr. Swati Kandharkar",
     title: "Vice Principal (Science)",
-    image:  Vice_principal,
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146779/Vice_Principal_Ma_am_crxjkg.png",
     alt: "Vice_Principal_Mam",
   },
   {
     name: "Dr. Shubhangi Bhatambrekar",
     title: "HOD (Computer Science)",
-    image: HOD_Maam,
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146724/HOD_Ma_am_l1l01k.png",
     alt: "HOD_Mam",
   },
   {
     name: "Dr. Dipali Meher",
     title: "CEO",
-    image: Dipali_Maam,
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146722/Dipali_Ma_am_kpcvuj.png",
     alt: "CEO",
-  }
+  },
 ];
 
 const Coordinators = () => {

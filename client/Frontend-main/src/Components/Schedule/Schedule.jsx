@@ -7,39 +7,44 @@ const Schedule = () => {
   const events = {
     "Day 1": [
       {
-        name: "Gamer Strike",
-        description:
-          "In Gamer Strike, participants compete in games. Players face off in a virtual arena, showcasing their gaming skills and strategy.",
-        image: "/images/gamer-strike.jpg",
-      },
-      {
-        name: "Quick Reel",
-        description:
-          "A Quick Reel Competition is a creative challenge that invites individuals or teams to produce short video reels, within a limited timeframe.",
-        image: "/images/quick-reel.jpg",
-      },
-      {
         name: "Brain Battle",
         description:
           "Brain battle is a Quiz competition, where experts and creative minds collaborate.",
-        image: "/images/brain-battle.jpg",
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146783/Brain_Battle_pugzlj.png",
+      },
+      {
+        name: "Media Splash",
+        description:
+          "A Quick Reel Competition is a creative challenge that invites individuals or teams to produce short video reels, within a limited timeframe.",
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146791/Quick_Reel_rtwcqv.png",
+      },
+      {
+        name: "Wisdom War",
+        description: "",
+
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146792/Wisdom_War_eonvmq.png",
       },
     ],
     "Day 2": [
       {
-        name: "Play Game",
-        description: "In Gamer Strike, participants compete in games.",
-        image: "/images/play-game.jpg",
+        name: "Hack In The Dark",
+        description: "",
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146788/Hack_in_the_Dark_nei9ox.png",
       },
       {
-        name: "Patpat",
-        description: "Patpat is an innovative idea competition.",
-        image: "/images/patpat.jpg",
+        name: "Spark The Idea",
+        description: "",
+        image: "",
       },
       {
-        name: "Sample",
-        description: "Sample is a collaboration on solutions.",
-        image: "/images/sample.jpg",
+        name: "Gold Rush",
+        description: "",
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146787/Gold_Rust_Quest_lrrppl.png",
       },
     ],
   };

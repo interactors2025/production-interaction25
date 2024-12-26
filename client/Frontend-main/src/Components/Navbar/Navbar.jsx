@@ -1,13 +1,23 @@
-import  { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Toggle the menu
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+
+  // Lock scrolling when menu is open (for mobile)
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isOpen]);
 
   return (
     <nav className="navbar">
@@ -37,7 +47,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/Teacher" onClick={toggleMenu}>
-           Coordinators
+            Coordinators
           </Link>
         </li>
         <li>
@@ -58,6 +68,11 @@ const Navbar = () => {
         <li>
           <Link to="/admin" onClick={toggleMenu}>
             Admin
+          </Link>
+        </li>
+        <li>
+          <Link to="/AdminDashboard" onClick={toggleMenu}>
+            Admin Dashboard
           </Link>
         </li>
         <li>
