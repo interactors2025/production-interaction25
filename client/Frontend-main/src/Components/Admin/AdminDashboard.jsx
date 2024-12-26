@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import UpdatePopup from "./UpdatePopup";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdminDashboard.css"
 
 const AdminDashboard = () => {
