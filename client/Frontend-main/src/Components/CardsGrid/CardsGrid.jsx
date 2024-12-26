@@ -1,34 +1,30 @@
 import "./CardsGrid.css";
-import img1 from "../../assets/img/prernamam.jpg";
-import img2 from "../../assets/img/atharvagujarsir.jpg";
-import img3 from "../../assets/img/atharva.jpg";
-import img4 from "../../assets/img/himani2.jpg";
 
 const CardsGrid = () => {
   const cards = [
     {
       id: 1,
       title: "Prerana Sarode",
-      description: "This is the first card.",
-      img: img1,
+      description: "Interaction Coordinator",
+      img: "https://res.cloudinary.com/delnxjp38/image/upload/v1735146780/Prerana_Sarode_EventCoordinator_lhg0ul.jpg",
     },
     {
       id: 2,
       title: "Atharva Gujar",
-      description: "This is the second card.",
-      img: img2,
+      description: "NCI Coordinator",
+      img: "https://res.cloudinary.com/delnxjp38/image/upload/v1735146725/Atharva_Gujar_EventCoordinator_fnsct2.jpg",
     },
     {
       id: 3,
       title: "Atharva Fude",
-      description: "This is the third card.",
-      img: img3,
+      description: "Interaction Student Coordinator",
+      img: "https://res.cloudinary.com/delnxjp38/image/upload/v1735146706/Atharva_Funde_vz97y8.png",
     },
     {
       id: 4,
       title: "Himani Thombre",
-      description: "This is the fourth card.",
-      img: img4,
+      description: "Interaction Student Coordinator",
+      img: "https://res.cloudinary.com/delnxjp38/image/upload/v1735146708/Himani_Thombre_m6i0uj.png",
     },
   ];
 

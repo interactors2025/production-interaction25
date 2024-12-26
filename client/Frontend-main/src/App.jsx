@@ -11,21 +11,18 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Gallery from "./Components/Gallery/Gallery";
 import Login from "./Components/Login/Login";
-// import CoordinatorSection from "./Components/CoordinatorSection/CoordinatorSection";
 import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
-//import Form from "./Components/Form/Form";
 import OtherForm from "./Components/others/form";
+import Admin from "./Components/Admin/Admin";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
 
-// A wrapper component to conditionally render Header and Navbar
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  // Check if the current path is not "/register"
   const isRegisterPage = location.pathname === "/register";
   const isLoginPage = location.pathname === "/login";
-  // const isCoordinator = location.pathname === "/coordinator";
 
   return (
     <>
@@ -50,7 +47,9 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
-          <Route path="/Form" element={<OtherForm />} />
+          <Route path="/form" element={<OtherForm />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/AdminDashboard" element={<AdminDashboard />} />
         </Routes>
       </Layout>
     </Router>

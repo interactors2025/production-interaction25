@@ -6,9 +6,9 @@ const DeveloperList = () => {
       image:
         "https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png",
       name: "Akshay Shiralsheth",
-      role: "Frontend Developer",
-      email: "Akshay@example.com",
-      linkedin: "https://www.linkedin.com/in/alice",
+      role: "Backend Developer",
+      email: "shiralshethakshay@gmail.com",
+      linkedin: "https://www.linkedin.com/in/akshay-shiralsheth-65b6391a6/",
     },
     {
       image:
@@ -46,7 +46,7 @@ const DeveloperList = () => {
 
   return (
     <div className="developer-list">
-    <h1> Our Developer's</h1>
+      <h1> Team Interactors</h1>
       <div className="top-developers">
         {developers.slice(0, 3).map((dev, index) => (
           <div className="developer-card" key={index}>

@@ -22,10 +22,8 @@ const Footer = () => {
             PES's Modern College of Arts, Science, and Commerce (Autonomous)
             <br />
             Ganeshkhind, Pune-16 <br />
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+918888956190">+91 88889 56190</a> <br />
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+917387158497">+91 73871 58497</a> <br />
+            <strong>Phone:</strong> <a href="tel:+91">+91</a> <br />
+            <strong>Phone:</strong> <a href="tel:+91">+91 </a> <br />
             <strong>Email:</strong>{" "}
             <a href="mailto:info@example.com">info@example.com</a>
           </address>
@@ -61,7 +59,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} <strong>Interaction 2025</strong>. All Rights Reserved</p>
+        <p>
+          &copy; {new Date().getFullYear()} <strong>Interaction 2025</strong>.
+          All Rights Reserved
+        </p>
         <p>Designed by Interactors</p>
       </div>
     </footer>

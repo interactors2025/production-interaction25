@@ -14,7 +14,7 @@ const Admin = () => {
     setError("");  
 
     try {
-      const response = await fetch("https://nci.onrender.com/api/v1/admin-login", {
+      const response = await fetch("https://nci25.moderncollegegk.in/api/v1/admin-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,12 +25,10 @@ const Admin = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Handle successful login, e.g., redirect to dashboard
+
         alert("Login successful!");
-        localStorage.setItem("token", data.token); // Save token or any other info
-        // Redirect logic can be here (e.g., using React Router)
+        localStorage.setItem("token", data.token); 
       } else {
-        // Handle error response from server
         setError(data.message || "Login failed. Please try again.");
       }
     } catch (error) {

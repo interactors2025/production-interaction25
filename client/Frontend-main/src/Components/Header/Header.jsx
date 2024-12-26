@@ -3,7 +3,7 @@ import img1 from "../../assets/img/clgLogo.jpg";
 import img2 from "../../assets/img/RUSA.jpeg";
 import img3 from "../../assets/img/PM-USHA.png";
 import img4 from "../../assets/img/interactionLogo.webp";
-import img5 from "../../assets/img/naacLogo.png";
+import img5 from "../../assets/img/naacLogo.jpg";
 
 const Header = () => {
   return (
