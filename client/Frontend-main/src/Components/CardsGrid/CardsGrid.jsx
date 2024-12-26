@@ -29,7 +29,7 @@ const CardsGrid = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="container1">
       <h2 className="title">Event Coordinators</h2>
       <div className="grid-container">
         {cards.map((card) => (

@@ -22,12 +22,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="logoI">
+      <div className="logoI" style={{ marginLeft: "2rem" }}>
         <Link to="/">NCI 25</Link>
       </div>
 
       {/* Hamburger Icon */}
-      <div className="hamburger" onClick={toggleMenu}>
+      <div
+        className="hamburger"
+        style={{ marginRight: "2rem" }}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
@@ -65,7 +69,7 @@ const Navbar = () => {
             Gallery
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/admin" onClick={toggleMenu}>
             Admin
           </Link>
@@ -74,7 +78,7 @@ const Navbar = () => {
           <Link to="/AdminDashboard" onClick={toggleMenu}>
             Admin Dashboard
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/form" className="register-button" onClick={toggleMenu}>
             Register
