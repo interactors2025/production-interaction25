@@ -91,7 +91,16 @@
   font-weight: bold;
   text-decoration: none;
 }
-
+.rule-button{
+  background-color: #17b224;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
 .register-button:hover {
   background-color: #ff4081;
 }
