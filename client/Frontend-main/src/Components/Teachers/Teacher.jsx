@@ -99,7 +99,7 @@ const Teacher = () => {
         },
         {
           name: "Prof. Shubham Bende",
-          image: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735451883/Shubham_hzfee0.jpg",
            
         },
         {
