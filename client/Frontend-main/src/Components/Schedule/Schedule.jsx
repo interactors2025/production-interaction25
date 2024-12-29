@@ -22,27 +22,34 @@ const Schedule = () => {
       },
       {
         name: "Wisdom War",
-        description: "",
+        description: "Under Wisdom, industry experts hire and guide students, offering them real-world insights, mentorship, and opportunities to excel in their careers.",
 
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146792/Wisdom_War_eonvmq.png",
+      },
+      {
+        name: "Gamer Strike",
+        description: "Students form teams and compete in multiplayer games, showcasing their strategic thinking, teamwork, and gaming skills. It promotes collaboration, quick decision-making, and a fun, competitive spirit.",
+
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735146786/Gamer_Strike_jr1llg.png",
       },
     ],
     "Day 2": [
       {
         name: "Hack In The Dark",
-        description: "",
+        description: "In this activity, students demonstrate their coding skills by solving challenges without direct access to references or tools, relying solely on their knowledge and logic. It tests their ability to think critically and code efficiently under pressure.",
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146788/Hack_in_the_Dark_nei9ox.png",
       },
       {
         name: "Spark The Idea",
-        description: "",
-        image: "",
+        description: "In this activity, participants ignite their creativity by presenting innovative ideas and sharing insights about them. It encourages brainstorming, effective communication, and the ability to articulate concepts clearly to inspire others.",
+        image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735399994/Spark_the_idea_cvo2vg.png",
       },
       {
         name: "Gold Rush",
-        description: "",
+        description: "In this activity, participants solve a series of clues and challenges to progress through stages, ultimately finding the hidden treasure. It fosters teamwork, problem-solving, and critical thinking in an engaging and adventurous way.",
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146787/Gold_Rust_Quest_lrrppl.png",
       },
@@ -51,24 +58,18 @@ const Schedule = () => {
 
   const schedules = {
     "Day 1": [
-      {
-        time: "08:30 AM to 09:30 AM",
-        activity: "Verification & Token Distribution",
-      },
-      { time: "09:30 AM to 10:30 AM", activity: "Inauguration" },
-      { time: "11:30 AM to 01:30 PM", activity: "Event 1st Session (Morning)" },
-      { time: "01:30 PM to 02:30 PM", activity: "Lunch Time" },
-      {
-        time: "02:30 PM to 04:30 PM",
-        activity: "Event 2nd Session (Afternoon)",
-      },
+      { time: "08:30 AM to 10:00 AM", activity: "Verification & Breakfast" },
+      { time: "10:00 AM to 01:00 AM", activity: "Inauguration & Planary Session" },
+      { time: "01:00 AM to 02:00 PM", activity: "Lunch Break" },
+      { time: "02:00 PM to 05:00 PM", activity: "Day 1 Events" },
     ],
     "Day 2": [
-      { time: "09:00 AM to 10:00 AM", activity: "Welcome & Introduction" },
-      { time: "10:00 AM to 12:00 PM", activity: "Workshop 1" },
-      { time: "12:00 PM to 01:00 PM", activity: "Networking & Lunch" },
-      { time: "01:00 PM to 03:00 PM", activity: "Panel Discussion" },
-      { time: "03:00 PM to 04:00 PM", activity: "Closing Remarks" },
+      { time: "08:30 AM to 09:00 AM", activity: "Verification & Breakfast" },
+      { time: "09:00 AM to 11:00 AM", activity: "Hack In The Dark/Spark The Idea" },
+      { time: "11:00 AM to 01:00 PM", activity: "Planary Session" },
+      { time: "01:00 PM to 02:00 PM", activity: "Lunch Break" },
+      { time: "02:00 PM to 04:00 PM", activity: "Gold Rush" },
+      { time: "04:00 PM ", activity: "Valedictory" },
     ],
   };
 
@@ -109,8 +110,8 @@ const Schedule = () => {
       </div>
       <div className="download-button">
         <a
-          href="/path/to/your-file.pdf"
-          download="YourFileName.pdf"
+          href="src\assets\ICS25_Interaction_Rules_2025.pdf"
+          download="RuleBook.pdf"
           className="button"
         >
           Download Rules

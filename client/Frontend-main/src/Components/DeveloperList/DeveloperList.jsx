@@ -13,10 +13,10 @@ const DeveloperList = () => {
     },
     {
       image:
-        "https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png",
+        "https://res.cloudinary.com/delnxjp38/image/upload/v1735349345/Aryan_xdydem.jpg",
       name: "Aryan Wagh",
       role: "Frontend Developer",
-      no: 9898989898,
+      no: 9764911438,
       email: "aryanwagh1007@gmail.com",
       linkedin: "https://www.linkedin.com/in/aryan-wagh-481a7a259",
     },

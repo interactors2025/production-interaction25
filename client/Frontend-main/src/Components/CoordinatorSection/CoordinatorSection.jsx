@@ -1,52 +1,56 @@
 import "./CoordinatorSection.css";
-import img1 from "../../assets/img/img1.jpg";
-import img2 from "../../assets/img/img2.jpg";
-import img3 from "../../assets/img/img3.jpg";
-import img4 from "../../assets/img/img4.jpg";
-import img5 from "../../assets/img/img5.jpg";
-import img6 from "../../assets/img/img6.jpg";
-import img7 from "../../assets/img/img7.jpg";
-import img8 from "../../assets/img/img8.jpg";
 
-// Coordinator Data
 const coordinators = [
-  { id: 1, name: "Priyanka", description: "Event Manager", image: img1 },
-  { id: 2, name: "Karan Sheth", description: "Refreshment Head", image: img2 },
-  { id: 3, name: "Michael Brown", description: "Marketing Lead", image: img3 },
-  { id: 4, name: "Shree Bhai", description: "Stage Coordinator", image: img4 },
-  { id: 5, name: "Balwadkar Bhau", description: "Publicity Head", image: img5 },
-  { id: 6, name: "Apurv Sheth", description: "Technical Lead", image: img6 },
   {
-    id: 7,
-    name: "Shreyas Sonu Devkar",
-    description: "Principal's Pal",
-    image: img7,
+    name: "Dr Vinay Kumar",
+    posi : "HOD (Biotechnology)",
+    title:"PM Usha Coordinator",
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735446610/Vinay_kumar_ospyrk.png",
+    alt: "",
   },
   {
-    id: 8,
-    name: "Chaitanya Ghodke",
-    description: "Graphics Head",
-    image: img8,
+    name: "Dr. Dipali Meher",
+    posi : "CEO (Vice Principal)",
+    title: "PM Usha Coordinator",
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146722/Dipali_Ma_am_kpcvuj.png",
+    alt: "PM Usha Coordinator",
+  },
+  {
+    name: "Prof. Meenal Jabde",
+    title: "PM Usha Coordinator",
+    image:
+      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146728/Meenal_Ma_am_pqluev.png",
+    alt: "PM Usha Coordinator",
+  },
+  {
+    name: "Dr. Satish Ambike",
+    title: "PM Usha Coordinator",
+    image:
+     "https://res.cloudinary.com/delnxjp38/image/upload/v1735146772/Satish_Sir_vypted.png",
+    alt: "PM Usha Coordinator",
   },
 ];
 
-const CoordinatorSection = () => {
+const Coordinators = () => {
   return (
-    <div className="coordinator-container">
-      <h2 className="coordinator-title">Meet Our Coordinators</h2>
-      <div className="coordinator-grid">
-        {coordinators.map((coordinator) => (
-          <div key={coordinator.id} className="coordinator-card">
+    <div className="container1 text-center">
+      <h1 className="section-header" style={{ fontWeight: 600 }}>
+        PM USHA(RUSA) Coordinators
+      </h1>
+      <div className="card-deck">
+        {coordinators.map((coordinator, index) => (
+          <div className="card" key={index}>
             <img
               src={coordinator.image}
-              alt={coordinator.name}
-              className="coordinator-image"
+              className="card-img-top"
+              alt={coordinator.alt}
             />
-            <div className="coordinator-info">
-              <h3 className="coordinator-name">{coordinator.name}</h3>
-              <p className="coordinator-description">
-                {coordinator.description}
-              </p>
+            <div className="card-body">
+              <h4 className="card-title">{coordinator.name}</h4>
+              <h5 className="card-text">{coordinator.posi}</h5>
+              <h5 className="card-text fw-bolder">{coordinator.title}</h5>
             </div>
           </div>
         ))}
@@ -55,4 +59,4 @@ const CoordinatorSection = () => {
   );
 };
 
-export default CoordinatorSection;
+export default Coordinators;

@@ -22,10 +22,10 @@ const Footer = () => {
             PES's Modern College of Arts, Science, and Commerce (Autonomous)
             <br />
             Ganeshkhind, Pune-16 <br />
-            <strong>Phone:</strong> <a href="tel:+91">+91</a> <br />
-            <strong>Phone:</strong> <a href="tel:+91">+91 </a> <br />
+            <strong>Phone: 7820881791</strong> <a href="tel:+91"></a> <br />
+            <strong>Phone: 9422205115</strong> <a href="tel:+91"> </a> <br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@example.com">info@example.com</a>
+            <a href="">interaction24@moderncollege.org</a>
           </address>
           <div className="social-links">
             <a

@@ -1,6 +1,7 @@
 import "./Teacher.css";
 import Coordinators from "../Coordinators/Coordinators";
 import CardsGrid from "../CardsGrid/CardsGrid";
+import CoordinatorSection from "../CoordinatorSection/CoordinatorSection";
 
 const Teacher = () => {
   const events = [
@@ -11,25 +12,25 @@ const Teacher = () => {
           name: "Dr. Sonal Kulkarni",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146776/Sonal_Ma_am_krx1ly.png",
-          contact: "",
+           
         },
         {
           name: "Prof. Kumod Sapkal",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146727/Kumod_sir_xunfwo.png",
-          contact: "",
+           
         },
         {
           name: "Coord. Karan Mishra",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146704/Karan_Mishra_spzeic.png",
-          contact: "+91 ",
+        
         },
         {
           name: "Coord. Srushti Shelke",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146717/Shrusti_Shelke_bccuu9.png",
-          contact: "+91 ",
+         
         },
       ],
     },
@@ -38,25 +39,25 @@ const Teacher = () => {
       teachers: [
         {
           name: "Dr. Vaishali Salunke",
-          image: "",
-          contact: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735402923/Vaishali_Mam_wttp9m.png",
+           
         },
         {
           name: "Prof. Rajashree Umrani",
-          image: "",
-          contact: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735402848/Rajashree_Umrani_l7py89.png",
+           
         },
         {
           name: "Coord. Mukta Bedekar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146710/Mukta_Bedekar_z2dnyl.png",
-          contact: "+91 ",
+          
         },
         {
           name: "Coord. Shravani Adhav",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146715/Shravani_Adhav_whn9ck.png",
-          contact: "+91",
+           
         },
       ],
     },
@@ -67,23 +68,50 @@ const Teacher = () => {
           name: "Dr. Satish Ambike",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146772/Satish_Sir_vypted.png",
-          contact: "",
+           
         },
         {
           name: "Prof. Pradnya Patil",
-          image: "",
-          contact: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735402565/Pradnya_Patil_apsgnh.png",
+           
         },
         {
           name: "Coord. Arati Giri",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146705/Arti_Giri_ldtiav.png",
-          contact: "+91",
+           
         },
         {
           name: "Coord. Aishwarya Jaybhay",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735386266/Aishwarya_i6cai8.png",
+         
+        },
+      ],
+    },
+    {
+      name: "Gamer's Strike",
+      teachers: [
+        {
+          name: "Prof. Atharav Gujar",
+          image:
+            "https://res.cloudinary.com/delnxjp38/image/upload/v1735146723/Atharva_Gujar_yzoh8v.png",
+           
+        },
+        {
+          name: "Prof. Shubham Bende",
           image: "",
-          contact: "+91 ",
+           
+        },
+        {
+          name: "Coord. Pushkar Dabhade",
+          image:
+            "https://res.cloudinary.com/delnxjp38/image/upload/v1735448296/Pushkar_Dabhade_l7dai4.png",
+           
+        },
+        {
+          name: "Coord. Prasad Deshpande",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735449684/Prasad_deshpande_xls34a.jpg",
+         
         },
       ],
     },
@@ -94,24 +122,24 @@ const Teacher = () => {
           name: "Prof. Ashwini Pawar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146720/Ashwini_Ma_am_tepkhh.png",
-          contact: "",
+           
         },
         {
           name: "Prof. Sonali Pathade",
-          image: "",
-          contact: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735146776/Sonali_Ma_am_ftoqph.png",
+           
         },
         {
           name: "Coord. Sakshee Lolgay",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146712/Sakshi_Lolgay_lx940y.png",
-          contact: "+91",
+           
         },
         {
           name: "Coord. Sakshi Salunke",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146713/Sakshi_Salunkhe_dy2cad.png",
-          contact: "+91 ",
+          
         },
       ],
     },
@@ -120,26 +148,26 @@ const Teacher = () => {
       teachers: [
         {
           name: "Dr. Deepak Kumbhar",
-          image: "",
-          contact: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735347999/Kumbhar_sir_qyum8y.png",
+           
         },
         {
           name: "Dr. Shubhangi Bhatambrekar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146724/HOD_Ma_am_l1l01k.png",
-          contact: "",
+           
         },
         {
           name: "Coord. Abhishek Bhujbal",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146701/Abhishek_Bhujbal_qixkbu.png",
-          contact: "+91 ",
+         
         },
         {
           name: "Coord. Shreyash Baber",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146714/Sheraysh_Babar_bchjxn.png",
-          contact: "+91 ",
+         
         },
       ],
     },
@@ -147,37 +175,37 @@ const Teacher = () => {
       name: "Gold Rush",
       teachers: [
         {
+          name: "Prof. Shahikala Jadhav",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735348030/Shashikala_Jadhav_rv8wz9.png",
+           
+        },
+        {
           name: "Prof. Rutuja Mokashi",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146734/Rutuja_Ma_am_eccjvz.png",
-          contact: "",
-        },
-        {
-          name: "Prof. Shashikala Jadhav",
-          image: "",
-          contact: "",
-        },
+           
+        },        
         {
           name: "Coord. Dhanashree Pawar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146702/Dhanashree_Pawar_brpvcu.png",
-          contact: "+91 ",
+   
         },
         {
           name: "Coord. Sakshi Jagtap",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146707/Sakshi_Jagtap_vnrllg.png",
-          contact: "+91",
+           
         },
       ],
     },
-    // Add more events as needed
   ];
 
   return (
     <>
       <Coordinators />
-      <CardsGrid />
+      <CoordinatorSection/>
+      <CardsGrid />     
       <div className="teacher-container">
         <h1 className="header1">INTERACTION COORDINATORS 2025</h1>
         <div className="event-grid">
