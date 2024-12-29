@@ -38,6 +38,10 @@ const Sponsors = () => {
       name: "Company I",
       logo: "https://res.cloudinary.com/delnxjp38/image/upload/v1735399977/Edwise_od3s42.avif",
     },
+    {
+      name: "Company J",
+      logo: "https://res.cloudinary.com/delnxjp38/image/upload/v1735494116/powerhouse_wjilrx.png",
+    },
   ];
 
   return (
