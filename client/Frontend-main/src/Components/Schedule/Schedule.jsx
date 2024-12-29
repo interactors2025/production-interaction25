@@ -3,6 +3,12 @@ import "./Schedule.css";
 
 const Schedule = () => {
   const [activeTab, setActiveTab] = useState("Day 1");
+  const handleDownload =() => {
+    const link = document.createElement('a');
+    link.href = 'src/assets/ICS_Interaction_Rules_2025.pdf'; 
+    link.download = 'ICS_Interaction_Rules_2025'; 
+    link.click(); 
+  };
 
   const events = {
     "Day 1": [
@@ -108,14 +114,10 @@ const Schedule = () => {
           </div>
         ))}
       </div>
-      <div className="download-button">
-        <a
-          href="src\assets\ICS25_Interaction_Rules_2025.pdf"
-          download="ICS_Interaction_Rules_2025.pdf"
-          className="button"
-        >
-          Download Rules
-        </a>
+     <div>
+      <li>
+        <button className="rule-button" onClick={handleDownload}>Download Rules</button>
+      </li>
       </div>
     </div>
   );
