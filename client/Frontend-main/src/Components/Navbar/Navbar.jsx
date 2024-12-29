@@ -68,18 +68,7 @@ const Navbar = () => {
           <Link to="/gallery" onClick={toggleMenu}>
             Gallery
           </Link>
-        </li>
-        {/* <li>
-          <Link to="/admin" onClick={toggleMenu}>
-            Admin
-          </Link>
-        </li>
-        <li>
-          <Link to="/AdminDashboard" onClick={toggleMenu}>
-            Admin Dashboard
-          </Link>
-        </li> */}
-        
+        </li>       
         <li>
         <a
           href="src\assets\ICS_Interaction_Rules_2025.pdf"
@@ -89,7 +78,7 @@ const Navbar = () => {
           Download Rules
         </a>
       </li>
-          
+          <li>
           <Link to="/form" className="register-button" onClick={toggleMenu}>
             Register
           </Link>
