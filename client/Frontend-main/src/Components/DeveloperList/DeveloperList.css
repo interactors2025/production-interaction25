@@ -15,7 +15,6 @@ h1 {
   color: white;
 }
 
-/* Common Developer Card Styling */
 .developer-card {
   background: #ffffff;
   border: 1px solid #e0e0e0;
@@ -24,7 +23,8 @@ h1 {
   padding: 20px;
   margin: 10px;
   text-align: center;
-  width: 280px;
+  width: 330px;
+  height: auto;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -34,8 +34,8 @@ h1 {
 }
 
 .developer-image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
@@ -75,7 +75,6 @@ h1 {
   text-decoration: underline;
 }
 
-/* Layout for Top and Bottom Developers */
 .top-developers,
 .bottom-developers {
   display: flex;
@@ -85,7 +84,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .developer-card {
     width: 220px;

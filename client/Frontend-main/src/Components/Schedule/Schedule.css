@@ -77,11 +77,14 @@
 }
 
 .event-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  width: 20%; /* Takes the full width of the card */
+  height: 60%; /* Takes the full height of the card */
+  object-fit: cover; /* Ensures the image fully covers the card while maintaining aspect ratio */
+  border-radius: 10px; /* Rounds the image to match card corners */
+  position: relative; /* Allows image to cover the card */
+  top: 0;
+  left: 0;
+ 
 }
 
 .event-info {
@@ -95,7 +98,7 @@
 }
 
 .event-info p {
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: #ddd;
 }
 
@@ -133,11 +136,11 @@
 
 .schedule-item .time {
   font-weight: 600;
-  color: #ff416c;
+  color: #d9d988 ;
 }
 
 .schedule-item .activity {
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: #e0e0e0;
 }
 

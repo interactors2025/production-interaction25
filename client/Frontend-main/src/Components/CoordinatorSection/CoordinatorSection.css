@@ -1,105 +1,153 @@
-/* General Styles */
-.coordinator-container {
+/* General Container Styling */
+.container1 {
+  margin: 0 auto;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+}
+.container1 h1 {
   text-align: center;
+  font-size: 2.5em;
+  color: #222;
+  margin-bottom: 20px;
 }
-
-.coordinator-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 50px;
-  color: #333;
+.section-header {
+  font-size: 2.2em;
+  color: #444;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Grid Layout */
-.coordinator-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row by default */
-  gap: 30px;
+/* Card Deck Layout */
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Adds uniform spacing between cards */
+  margin-top: 20px;
 }
 
-/* Card Styling */
-.coordinator-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Individual Card Styling */
+.card {
+  flex: 1 1 calc(20% - 30px); /* Default: 5 cards per row */
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 380px; /* Increased card width */
-  min-height: 350px; /* Increased card height */
+  max-width: 240px;
+  cursor: pointer;
 }
-
-.coordinator-card:hover {
+.card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Image Styling */
-.coordinator-image {
-  width: 100%;
-  height: 250px; /* Increased image height */
-  object-fit: cover; /* Ensures image fits the card properly */
-  display: block;
+.card-img-top {
+  width: 100%; /* Maintain the full width of the card */
+  height: auto; /* Let the height adjust automatically based on the image's original aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+  background-color: #eaeaea; /* Placeholder background for transparent images */
+  transition: opacity 0.3s ease;
 }
 
-/* Card Info */
-.coordinator-info {
-  padding: 20px; /* Increased padding for better spacing */
+.card:hover .card-img-top {
+  opacity: 0.9;
 }
 
-.coordinator-name {
-  font-size: 1.4rem;
-  color: #0056b3;
-  font-weight: bold;
-  margin: 0;
+/* Card Body */
+.card-body {
+  padding: 20px;
+  background-color: #fafafa;
 }
 
-.coordinator-description {
-  font-size: 1.1rem; /* Slightly larger font size */
-  color: #666;
-  margin-top: 15px;
-  line-height: 1.4;
+.card-title {
+  font-size: 1.4em;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1em;
+  color: #777;
+  line-height: 1.5;
 }
 
 /* Responsive Design */
 
-/* Tablets - 2 Cards Per Row */
-@media (max-width: 992px) {
-  .coordinator-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .coordinator-title {
-    font-size: 2rem;
-  }
-
-  .coordinator-name {
-    font-size: 1.3rem;
-  }
-
-  .coordinator-description {
-    font-size: 1rem;
+/* Large Desktops - 5 Cards per Row */
+@media (min-width: 1200px) {
+  .card {
+    flex: 1 1 calc(20% - 30px); /* 5 cards per row */
   }
 }
 
-/* Mobile - 1 Card Per Row */
-@media (max-width: 576px) {
-  .coordinator-grid {
-    grid-template-columns: 1fr;
+/* Desktops - 4 Cards per Row */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card {
+    flex: 1 1 calc(25% - 30px); /* 4 cards per row */
   }
 
-  .coordinator-title {
-    font-size: 1.8rem;
+  .section-header {
+    font-size: 2em;
+  }
+}
+
+/* Large Tablets - 3 Cards per Row */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    flex: 1 1 calc(33.33% - 30px); /* 3 cards per row */
   }
 
-  .coordinator-name {
-    font-size: 1.2rem;
+  .card-img-top {
+    height: 200px; /* Adjusted for tablets */
   }
 
-  .coordinator-description {
-    font-size: 0.95rem;
+  .section-header {
+    font-size: 1.8em;
+  }
+}
+
+/* Small Tablets - 2 Cards per Row */
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    flex: 1 1 calc(50% - 30px); /* 2 cards per row */
+  }
+
+  .card-img-top {
+    height: 180px; /* Smaller images */
+  }
+
+  .section-header {
+    font-size: 1.6em;
+  }
+}
+
+/* Mobile Devices - 1 Card per Row */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 30px); /* 1 card per row */
+    margin: 0 auto;
+  }
+
+  .card-img-top {
+    height: 160px; /* Adjusted for mobile */
+  }
+
+  .section-header {
+    font-size: 1.4em;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .card-text {
+    font-size: 0.9em;
   }
 }

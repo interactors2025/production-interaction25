@@ -9,7 +9,7 @@ const coordinators = [
     alt: "Principal_Sir",
   },
   {
-    name: "Dr. Swati Kandharkar",
+    name: "Prof. Swati Kandharkar",
     title: "Vice Principal (Science)",
     image:
       "https://res.cloudinary.com/delnxjp38/image/upload/v1735146779/Vice_Principal_Ma_am_crxjkg.png",
@@ -21,14 +21,7 @@ const coordinators = [
     image:
       "https://res.cloudinary.com/delnxjp38/image/upload/v1735146724/HOD_Ma_am_l1l01k.png",
     alt: "HOD_Mam",
-  },
-  {
-    name: "Dr. Dipali Meher",
-    title: "CEO",
-    image:
-      "https://res.cloudinary.com/delnxjp38/image/upload/v1735146722/Dipali_Ma_am_kpcvuj.png",
-    alt: "CEO",
-  },
+  }
 ];
 
 const Coordinators = () => {

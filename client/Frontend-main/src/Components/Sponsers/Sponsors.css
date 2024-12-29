@@ -6,7 +6,7 @@
 
 .sponsor-logos h1 {
   font-size: 3rem;
-  color: white;
+
 }
 
 .logo-container {
@@ -15,6 +15,7 @@
   grid-gap: 50px; /* Larger spacing between items for desktop */
   justify-content: center;
   padding: 20px; /* Adds space around the container */
+  
 }
 
 /* Individual Logo Item */
