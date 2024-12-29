@@ -21,8 +21,8 @@ const Navbar = () => {
 
   const handleDownload =() => {
     const link = document.createElement('a');
-    link.href = 'public/ICS_Interaction_Rules_2025.pdf';
-    link.download = 'ICS_Interaction_Rules_2025.pdf'; 
+    link.href = 'public/ICS_Interaction_Rules_2025.pdf';  
+    link.download = 'ICS_Interaction_Rules_2025'; 
     link.click(); 
   };
 
@@ -75,11 +75,12 @@ const Navbar = () => {
           <Link to="/gallery" onClick={toggleMenu}>
             Gallery
           </Link>
-        </li>       
-       <li>
+        </li>
+        <li>
         <button className="rule-button" onClick={handleDownload}>Download Rules</button>
       </li>
-          <li>
+
+        <li>
           <Link to="/form" className="register-button" onClick={toggleMenu}>
             Register
           </Link>
