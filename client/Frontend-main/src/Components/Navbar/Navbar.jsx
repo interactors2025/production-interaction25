@@ -82,8 +82,8 @@ const Navbar = () => {
         
         <li>
         <a
-          href="src\assets\ICS25_Interaction_Rules_2025.pdf"
-          download="RuleBook.pdf"
+          href="src\assets\ICS_Interaction_Rules_2025.pdf"
+          download="ICS_Interaction_Rules_2025.pdf"
           className="rule-button"
         >
           Download Rules
