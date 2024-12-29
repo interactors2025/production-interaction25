@@ -6,7 +6,7 @@ const Schedule = () => {
   const handleDownload =() => {
     const link = document.createElement('a');
     link.href = 'src/assets/ICS_Interaction_Rules_2025.pdf'; 
-    link.download = 'ICS_Interaction_Rules_2025'; 
+    link.download = 'ICS_Interaction_Rules_2025.pdf'; 
     link.click(); 
   };
 
