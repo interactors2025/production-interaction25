@@ -111,7 +111,7 @@ const Schedule = () => {
       <div className="download-button">
         <a
           href="src\assets\ICS25_Interaction_Rules_2025.pdf"
-          download="RuleBook.pdf"
+          download="ICS_Interaction_Rules_2025.pdf"
           className="button"
         >
           Download Rules
