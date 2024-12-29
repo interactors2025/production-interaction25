@@ -15,7 +15,7 @@ import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
 import OtherForm from "./Components/others/form";
-import Admin from "./Components/Admin/Admin";
+//import Admin from "./Components/Admin/Admin";
 import AdminDashboard from "./Components/Admin/AdminDashboard";
 
 const Layout = ({ children }) => {
