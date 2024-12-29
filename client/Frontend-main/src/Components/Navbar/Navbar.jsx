@@ -79,7 +79,17 @@ const Navbar = () => {
             Admin Dashboard
           </Link>
         </li> */}
+        
         <li>
+        <a
+          href="src\assets\ICS25_Interaction_Rules_2025.pdf"
+          download="RuleBook.pdf"
+          className="rule-button"
+        >
+          Download Rules
+        </a>
+      </li>
+          
           <Link to="/form" className="register-button" onClick={toggleMenu}>
             Register
           </Link>
