@@ -45,7 +45,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links */}
-      <ul className={nav-links ${isOpen ? "open" : ""}}>
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
           <Link to="/" onClick={toggleMenu}>
             Home
