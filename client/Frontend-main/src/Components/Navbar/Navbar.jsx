@@ -19,11 +19,11 @@ const Navbar = () => {
     }
   }, [isOpen]);
 
-  const handleDownload =() => {
-    const link = document.createElement('a');
-    link.href = 'public/ICS_Interaction_Rules_2025.pdf';  
-    link.download = 'ICS_Interaction_Rules_2025'; 
-    link.click(); 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "public/ICS_Interaction_Rules_2025.pdf";
+    link.download = "ICS_Interaction_Rules_2025";
+    link.click();
   };
 
   return (
@@ -45,7 +45,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links */}
-      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+      <ul className={nav-links ${isOpen ? "open" : ""}}>
         <li>
           <Link to="/" onClick={toggleMenu}>
             Home
@@ -77,8 +77,10 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-        <button className="register-button" onClick={handleDownload}>Download Rules</button>
-      </li>
+          <button className="register-button" onClick={handleDownload}>
+            Download Rules
+          </button>
+        </li>
 
         <li>
           <Link to="/form" className="register-button" onClick={toggleMenu}>
