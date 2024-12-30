@@ -15,8 +15,6 @@ import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
 import OtherForm from "./Components/others/form";
-import AdminDashboard from "./Components/Admin/AdminDashboard";
-import ProtectedRoute from "./context/protectedRoute";
 
 const Layout = ({ children }) => {
   const location = useLocation();
