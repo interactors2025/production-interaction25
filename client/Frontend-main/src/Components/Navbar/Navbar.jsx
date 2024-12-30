@@ -77,7 +77,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-        <button className="rule-button" onClick={handleDownload}>Download Rules</button>
+        <button className="register-button" onClick={handleDownload}>Download Rules</button>
       </li>
 
         <li>
