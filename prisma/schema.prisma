@@ -52,3 +52,24 @@ model Staff {
   Status      Boolean  @default(false)
   role        String   @default("staff")
 }
+
+
+model Attendance {
+  Id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String?  @db.ObjectId // Relation to User
+  staffId     String?  @db.ObjectId // Relation to Staff
+  eventId     String  // Event identifier
+  attended    Boolean // Attendance status (true or false)
+  createdAt   DateTime @default(now()) // Time when attendance was recorded
+  token       String  // Unique token for attendance entry
+
+
+}
+
+
+model Event {
+  Id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  eventId     String   @unique
+  name        String
+
+}
