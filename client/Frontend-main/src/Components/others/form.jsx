@@ -498,7 +498,7 @@ export default function OtherForm() {
           )}
 
           <Grid item xs={12}>
-            <label>Upload Transaction Screenshot (Only Screenshot and Max size is 1MB)</label>
+            <label>Upload Transaction Screenshot (Max size is 1MB)</label>
             <input
               label="Upload Image"
               type="file"
