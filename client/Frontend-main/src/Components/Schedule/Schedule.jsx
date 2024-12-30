@@ -116,7 +116,7 @@ const Schedule = () => {
       </div>
      <div>
       <li>
-        <button className="rule-button" onClick={handleDownload}>Download Rules</button>
+        <button className="register-button" onClick={handleDownload}>Download Rules</button>
       </li>
       </div>
     </div>
