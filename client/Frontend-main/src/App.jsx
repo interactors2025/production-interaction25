@@ -15,8 +15,6 @@ import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
 import OtherForm from "./Components/others/form";
-//import Admin from "./Components/Admin/Admin";
-import AdminDashboard from "./Components/Admin/AdminDashboard";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -48,8 +46,6 @@ const App = () => {
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
           <Route path="/form" element={<OtherForm />} />
-          {/* <Route path="/Admin" element={<Admin />} /> */}
-          <Route path="/AdminDashboard" element={<AdminDashboard />} /> 
         </Routes>
       </Layout>
     </Router>
