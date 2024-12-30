@@ -10,6 +10,8 @@ const admin = require("./router/admin");
 const errorHandler = require('./middleware/errorHandler');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const prisma = require('./utils/prismaClient');
+const attendance = require('./router/attendance')
 
 
 // declarations
@@ -22,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(errorHandler);
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5500',],
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization'
 }));
@@ -36,6 +38,7 @@ app.get('/health', (req, res) => res.status(200).json({status: 'ok', message: 'A
 
 app.use('/api/v1', user);
 app.use('/api/v1', admin);
+app.use('/api/v1', attendance);
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -45,6 +48,8 @@ app.use((req, res) => {
   });
 });
 app.use(errorHandler);
+
+
 //routes
 
 
