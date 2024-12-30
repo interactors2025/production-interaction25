@@ -25,7 +25,7 @@ const Footer = () => {
             <strong>Phone: 7820881791</strong> <a href="tel:+91"></a> <br />
             <strong>Phone: 9422205115</strong> <a href="tel:+91"> </a> <br />
             <strong>Email:</strong>{" "}
-            <a href="">interaction24@moderncollege.org</a>
+            <a href="">interaction24@moderncollege <br/>.org</a>
           </address>
           <div className="social-links">
             <a
