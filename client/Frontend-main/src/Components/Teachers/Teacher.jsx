@@ -99,7 +99,7 @@ const Teacher = () => {
         },
         {
           name: "Prof. Shubham Bende",
-          image: "",
+          image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735451883/Shubham_hzfee0.jpg",
            
         },
         {
@@ -164,7 +164,7 @@ const Teacher = () => {
          
         },
         {
-          name: "Coord. Shreyash Baber",
+          name: "Coord. Shreyash Babar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146714/Sheraysh_Babar_bchjxn.png",
          

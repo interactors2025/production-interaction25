@@ -19,6 +19,13 @@ const Navbar = () => {
     }
   }, [isOpen]);
 
+  const handleDownload =() => {
+    const link = document.createElement('a');
+    link.href = 'public/ICS_Interaction_Rules_2025.pdf';  
+    link.download = 'ICS_Interaction_Rules_2025'; 
+    link.click(); 
+  };
+
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -69,16 +76,10 @@ const Navbar = () => {
             Gallery
           </Link>
         </li>
-        {/* <li>
-          <Link to="/admin" onClick={toggleMenu}>
-            Admin
-          </Link>
-        </li>
         <li>
-          <Link to="/AdminDashboard" onClick={toggleMenu}>
-            Admin Dashboard
-          </Link>
-        </li> */}
+        <button className="register-button" onClick={handleDownload}>Download Rules</button>
+      </li>
+
         <li>
           <Link to="/form" className="register-button" onClick={toggleMenu}>
             Register
