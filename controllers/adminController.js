@@ -398,13 +398,14 @@ exports.getLatest10Staff= async (_,res) => {
 
 
 const events1 = [
-  { name: 'National Conference', amount: 100 },
-  { name: 'Brain Battle (Day1)', amount: 100 },
-  { name: 'Media Splash(Day1)', amount: 100 },
-  { name: 'Wisdom War(Day1)', amount: 100 },
-  { name: 'Hack in the Dark(Day2)', amount: 100 },
-  { name: 'Spark the Idea(Day2)', amount: 100 },
-  { name: 'Gold Rush Quest(Day2)', amount: 100 },
+  { name: 'National Conference',  },
+  { name: 'Brain Battle ',  },
+  { name: 'Media Splash', },
+  { name: 'Wisdom War',  },
+  { name: 'Hack in the Dark', },
+  { name: 'Spark the Idea', },
+  { name: 'Gold Rush Quest', },
+  { name: 'Gamer Strike', },
 ];
 
 exports.exportUsersToExcel = async (req, res) => {
@@ -425,8 +426,7 @@ exports.exportUsersToExcel = async (req, res) => {
         country: true,
         state: true,
         createdAt: true,
-        Status: true,
-        role: true,
+
       },
     });
 
@@ -436,7 +436,6 @@ exports.exportUsersToExcel = async (req, res) => {
 
     // Add header row with dynamic event columns
     worksheet.columns = [
-      { header: 'Id', key: 'Id' },
       { header: 'Token', key: 'Token' },
       { header: 'First Name', key: 'firstName' },
       { header: 'Last Name', key: 'lastName' },
