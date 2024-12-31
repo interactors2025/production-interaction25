@@ -1,5 +1,5 @@
 const CustomResponse = require('../utils/customResponse');
-const { validationResult } = require('express-validator');
+const { validationResult, header } = require('express-validator');
 const Users = require('../data/Users')
 const { generateToken } = require('../utils/jwt');
 const prisma = require('../utils/prismaClient');
@@ -399,10 +399,10 @@ exports.getLatest10Staff= async (_,res) => {
 
 const events1 = [
   { name: 'National Conference',  },
-  { name: 'Brain Battle ',  },
+  { name: 'Brain Battle',  },
   { name: 'Media Splash', },
   { name: 'Wisdom War',  },
-  { name: 'Hack in the Dark', },
+  { name: 'Hack in Dark', },
   { name: 'Spark the Idea', },
   { name: 'Gold Rush Quest', },
   { name: 'Gamer Strike', },
@@ -473,7 +473,7 @@ exports.exportUsersToExcel = async (req, res) => {
 
       // Add participation data for each event
       events1.forEach(event => {
-        row[event.name] = user.Events.includes(event.name) ? 1 : 0;
+        row[event.name] = user.Events.includes(event.name) ? event.name : 'None'
       });
 
       // Add the row to the worksheet
