@@ -2,6 +2,7 @@ import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import Sponsors from "../Sponsers/Sponsors";
 import Header from "../Header/Header";
+import Countdown from "../Count/Countdown"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Home = () => {
           Register
         </button>
       </div>
+      <Countdown/>
       <Sponsors />
     </>
   );
