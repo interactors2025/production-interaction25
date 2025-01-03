@@ -159,14 +159,14 @@ const Teacher = () => {
       name: "Gold Rush",
       teachers: [
         {
-          name: "Prof. Shashikala Jadhav",
-          image:
-            "https://res.cloudinary.com/delnxjp38/image/upload/v1735348030/Shashikala_Jadhav_rv8wz9.png",
-        },
-        {
           name: "Prof. Rutuja Mokashi",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146734/Rutuja_Ma_am_eccjvz.png",
+        },
+        {
+          name: "Prof. Shashikala Jadhav",
+          image:
+            "https://res.cloudinary.com/delnxjp38/image/upload/v1735348030/Shashikala_Jadhav_rv8wz9.png",
         },
         {
           name: "Std. Dhanashree Pawar",
