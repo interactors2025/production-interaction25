@@ -21,9 +21,11 @@ const Navbar = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "public/ICS_Interaction_Rules_2025.pdf";
-    link.download = "ICS_Interaction_Rules_2025";
-    link.click();
+    link.href = "/ICS_Interaction_Rules_2025.pdf"; // This will now point to the file in the public folder
+    link.download = "ICS_Interaction_Rules_2025.pdf"; // Ensure the file has the correct extension
+    document.body.appendChild(link); // Append to the body to make the click work
+    link.click(); // Simulate the click
+    document.body.removeChild(link); // Clean up the DOM
   };
 
   return (
