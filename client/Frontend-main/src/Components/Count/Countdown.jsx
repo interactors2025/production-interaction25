@@ -1,6 +1,5 @@
-import  { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Countdown.css"
+import { useState, useEffect } from "react";
+import "./Countdown.css";
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({});
@@ -21,7 +20,9 @@ const Countdown = () => {
         });
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -39,12 +40,15 @@ const Countdown = () => {
           <h1 className="card-title text-primary mb-4">Countdown to Event</h1>
           <div className="timer">
             <h2 className="text-danger fw-bold">
-              {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
+              {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m :{" "}
+              {timeLeft.seconds}s
             </h2>
           </div>
           <hr />
           <div className="event-dates mt-3">
-            <p className="text-secondary fs-5"><h3>Event Dates:</h3> 20 & 21 January 2025</p>
+            <p className="text-secondary fs-5">
+              <h3>Event Dates:</h3> 20 & 21 January 2025
+            </p>
           </div>
         </div>
       </div>
