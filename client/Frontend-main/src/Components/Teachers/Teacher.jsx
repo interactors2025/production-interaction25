@@ -22,11 +22,13 @@ const Teacher = () => {
           name: "Std. Karan Mishra",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146704/Karan_Mishra_spzeic.png",
+          no: 9075074075,
         },
         {
           name: "Std. Srushti Shelke",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146717/Shrusti_Shelke_bccuu9.png",
+          no: 8830763735,
         },
       ],
     },
@@ -47,11 +49,13 @@ const Teacher = () => {
           name: "Std. Mukta Bedekar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146710/Mukta_Bedekar_z2dnyl.png",
+          no: 7387627456,
         },
         {
           name: "Std. Shravani Adhav",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146715/Shravani_Adhav_whn9ck.png",
+          no: 9545758950,
         },
       ],
     },
@@ -72,11 +76,13 @@ const Teacher = () => {
           name: "Std. Arati Giri",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146705/Arti_Giri_ldtiav.png",
+          no: 7722057077,
         },
         {
           name: "Std. Aishwarya Jaybhay",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735386266/Aishwarya_i6cai8.png",
+          no: 9022078880,
         },
       ],
     },
@@ -97,11 +103,13 @@ const Teacher = () => {
           name: "Std. Pushkar Dabhade",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735448296/Pushkar_Dabhade_l7dai4.png",
+          no: 7218910061,
         },
         {
           name: "Std. Prasad Deshpande",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735449684/Prasad_deshpande_xls34a.jpg",
+          no: 8788098130,
         },
       ],
     },
@@ -122,11 +130,13 @@ const Teacher = () => {
           name: "Std. Sakshee Lolgay",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146712/Sakshi_Lolgay_lx940y.png",
+          no: 7588891034,
         },
         {
           name: "Std. Sakshi Salunke",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146713/Sakshi_Salunkhe_dy2cad.png",
+          no: 1010101010,
         },
       ],
     },
@@ -147,11 +157,13 @@ const Teacher = () => {
           name: "Std. Abhishek Bhujbal",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146701/Abhishek_Bhujbal_qixkbu.png",
+          no: 8798840174,
         },
         {
           name: "Std. Shreyash Babar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146714/Sheraysh_Babar_bchjxn.png",
+          no: 9699263693,
         },
       ],
     },
@@ -172,11 +184,13 @@ const Teacher = () => {
           name: "Std. Dhanashree Pawar",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146702/Dhanashree_Pawar_brpvcu.png",
+          no: 8669484270,
         },
         {
           name: "Std. Sakshi Jagtap",
           image:
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146707/Sakshi_Jagtap_vnrllg.png",
+          no: 8788452433,
         },
       ],
     },
