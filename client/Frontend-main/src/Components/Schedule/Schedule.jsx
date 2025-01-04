@@ -2,25 +2,25 @@ import { useState } from "react";
 import "./Schedule.css";
 
 const Schedule = () => {
-  const [activeTab, setActiveTab] = useState("Day 1");
-  const handleDownload =() => {
-    const link = document.createElement('a');
-    link.href = 'public/ICS_Interaction_Rules_2025.pdf';
-    link.download = 'ICS_Interaction_Rules_2025.pdf'; 
-    link.click(); 
+  const [activeTab, setActiveTab] = useState("Day 1 - 20th Jan 2025");
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "public/ICS_Interaction_Rules_2025.pdf";
+    link.download = "ICS_Interaction_Rules_2025.pdf";
+    link.click();
   };
 
   const events = {
-    "Day 1": [
+    "Day 1 - 20th Jan 2025": [
       {
-        name: "Brain Battle",
+        name: "Brain Battle (On data science,AI,Cloud)",
         description:
           "Brain battle is a Quiz competition, where experts and creative minds collaborate.",
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146783/Brain_Battle_pugzlj.png",
       },
       {
-        name: "Media Splash",
+        name: "Media Splash (On data science,AI,Cloud)",
         description:
           "A Quick Reel Competition is a creative challenge that invites individuals or teams to produce short video reels, within a limited timeframe.",
         image:
@@ -28,34 +28,40 @@ const Schedule = () => {
       },
       {
         name: "Wisdom War",
-        description: "Under Wisdom, industry experts hire and guide students, offering them real-world insights, mentorship, and opportunities to excel in their careers.",
+        description:
+          "Under Wisdom, industry experts hire and guide students, offering them real-world insights, mentorship, and opportunities to excel in their careers.",
 
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146792/Wisdom_War_eonvmq.png",
       },
       {
         name: "Gamer Strike",
-        description: "Students form teams and compete in multiplayer games, showcasing their strategic thinking, teamwork, and gaming skills. It promotes collaboration, quick decision-making, and a fun, competitive spirit.",
+        description:
+          "Students form teams and compete in multiplayer games, showcasing their strategic thinking, teamwork, and gaming skills. It promotes collaboration, quick decision-making, and a fun, competitive spirit.",
 
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146786/Gamer_Strike_jr1llg.png",
       },
     ],
-    "Day 2": [
+    "Day 2 - 21th Jan 2025": [
       {
-        name: "Hack In The Dark",
-        description: "In this activity, students demonstrate their coding skills by solving challenges without direct access to references or tools, relying solely on their knowledge and logic. It tests their ability to think critically and code efficiently under pressure.",
+        name: "Hack In The Dark (C, Java)",
+        description:
+          "In this activity, students demonstrate their coding skills by solving challenges without direct access to references or tools, relying solely on their knowledge and logic. It tests their ability to think critically and code efficiently under pressure.",
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146788/Hack_in_the_Dark_nei9ox.png",
       },
       {
-        name: "Spark The Idea",
-        description: "In this activity, participants ignite their creativity by presenting innovative ideas and sharing insights about them. It encourages brainstorming, effective communication, and the ability to articulate concepts clearly to inspire others.",
-        image: "https://res.cloudinary.com/delnxjp38/image/upload/v1735399994/Spark_the_idea_cvo2vg.png",
+        name: "Spark The Idea (On data science,AI,Cloud)",
+        description:
+          "In this activity, participants ignite their creativity by presenting innovative ideas and sharing insights about them. It encourages brainstorming, effective communication, and the ability to articulate concepts clearly to inspire others.",
+        image:
+          "https://res.cloudinary.com/delnxjp38/image/upload/v1735399994/Spark_the_idea_cvo2vg.png",
       },
       {
         name: "Gold Rush",
-        description: "In this activity, participants solve a series of clues and challenges to progress through stages, ultimately finding the hidden treasure. It fosters teamwork, problem-solving, and critical thinking in an engaging and adventurous way.",
+        description:
+          "In this activity, participants solve a series of clues and challenges to progress through stages, ultimately finding the hidden treasure. It fosters teamwork, problem-solving, and critical thinking in an engaging and adventurous way.",
         image:
           "https://res.cloudinary.com/delnxjp38/image/upload/v1735146787/Gold_Rust_Quest_lrrppl.png",
       },
@@ -63,15 +69,21 @@ const Schedule = () => {
   };
 
   const schedules = {
-    "Day 1": [
+    "Day 1 - 20th Jan 2025": [
       { time: "08:30 AM to 10:00 AM", activity: "Verification & Breakfast" },
-      { time: "10:00 AM to 01:00 AM", activity: "Inauguration & Planary Session" },
+      {
+        time: "10:00 AM to 01:00 AM",
+        activity: "Inauguration & Planary Session",
+      },
       { time: "01:00 AM to 02:00 PM", activity: "Lunch Break" },
       { time: "02:00 PM to 05:00 PM", activity: "Day 1 Events" },
     ],
-    "Day 2": [
+    "Day 2 - 21th Jan 2025": [
       { time: "08:30 AM to 09:00 AM", activity: "Verification & Breakfast" },
-      { time: "09:00 AM to 11:00 AM", activity: "Hack In The Dark/Spark The Idea" },
+      {
+        time: "09:00 AM to 11:00 AM",
+        activity: "Hack In The Dark/Spark The Idea",
+      },
       { time: "11:00 AM to 01:00 PM", activity: "Planary Session" },
       { time: "01:00 PM to 02:00 PM", activity: "Lunch Break" },
       { time: "02:00 PM to 04:00 PM", activity: "Gold Rush" },
@@ -114,10 +126,12 @@ const Schedule = () => {
           </div>
         ))}
       </div>
-     <div>
-      <li>
-        <button className="register-button" onClick={handleDownload}>Download Rules</button>
-      </li>
+      <div>
+        <li>
+          <button className="register-button" onClick={handleDownload}>
+            Download Rules
+          </button>
+        </li>
       </div>
     </div>
   );

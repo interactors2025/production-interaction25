@@ -24,8 +24,7 @@ const Footer = () => {
             Ganeshkhind, Pune-16 <br />
             <strong>Phone: 7820881791</strong> <a href="tel:+91"></a> <br />
             <strong>Phone: 9422205115</strong> <a href="tel:+91"> </a> <br />
-            <strong>Email:</strong>{" "}
-            <a href="">interaction24@moderncollege.org</a>
+            <strong>Email:</strong> <a href="">nci2025@moderncollegegk.org</a>
           </address>
           <div className="social-links">
             <a
