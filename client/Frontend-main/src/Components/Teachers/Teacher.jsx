@@ -217,6 +217,7 @@ const Teacher = () => {
                       className="teacher-image"
                     />
                     <p className="teacher-name">{teacher.name}</p>
+                    {teacher.no ? <p>+91 {teacher.no}</p> : ""}
                     {teacher.contact && (
                       <p className="teacher-contact">{teacher.contact}</p>
                     )}
