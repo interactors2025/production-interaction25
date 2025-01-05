@@ -69,15 +69,15 @@
 /* Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
   .event-grid {
-    grid-template-columns: 1fr; /* Single card per row */
+    grid-template-columns: 1fr; /* 2 card per row */
   }
 
   .teachers {
-    grid-template-columns: 1fr; /* Single teacher card per row */
+    grid-template-columns: repeat(2, 1fr); /* Single teacher card per row */
   }
 
   .teacher-image {
-    width: 150px;
+    width: 130px;
     height: 150px;
   }
 }
@@ -86,6 +86,7 @@
   .header1 {
     font-size: 1.5rem;
   }
+ 
 
   .event-card {
     padding: 0.8rem;
