@@ -33,6 +33,27 @@
       crossorigin="anonymous"
     />
     <title>NCI 25</title>
+
+    <script>
+      // Disable right-click
+      document.addEventListener('contextmenu', function (event) {
+          event.preventDefault();
+      });
+
+      // Disable specific keyboard shortcuts
+      document.addEventListener('keydown', function (event) {
+          // Disable F12 (Inspect Element)
+          if (event.key === "F12") {
+              event.preventDefault();
+          }
+          // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U
+          if (event.ctrlKey && (event.shiftKey || event.key === 'u')) {
+              if (event.key === 'I' || event.key === 'J' || event.key === 'C' || event.key === 'U') {
+                  event.preventDefault();
+              }
+          }
+      });
+  </script>
   </head>
   <body>
     <div id="root"></div>
