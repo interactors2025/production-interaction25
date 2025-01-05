@@ -129,10 +129,10 @@
   }
 }
 
-/* Mobile Devices - 1 Card per Row */
+/* Mobile Devices - 2 Card per Row */
 @media (max-width: 480px) {
   .card {
-    flex: 1 1 calc(100% - 30px); /* 1 card per row */
+    flex: 1 1 calc(50% - 30px); /* 2 card per row */
     margin: 0 auto;
   }
 

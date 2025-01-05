@@ -156,8 +156,8 @@ const Teacher = () => {
         {
           name: "Std. Abhishek Bhujbal",
           image:
-            "https://res.cloudinary.com/delnxjp38/image/upload/v1735146701/Abhishek_Bhujbal_qixkbu.png",
-          no: 8798840174,
+            "https://res.cloudinary.com/delnxjp38/image/upload/v1736087232/Abhishek_oprgly.jpg",
+          no: 7498840174,
         },
         {
           name: "Std. Shreyash Babar",
