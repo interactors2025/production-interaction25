@@ -1,0 +1,90 @@
+/* Thumbnail Images */
+.user-image {
+  width: 50px; /* Thumbnail size */
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px; /* Optional, for rounded corners */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.user-image:hover {
+  transform: scale(1.1);
+}
+
+/* Popup Overlay */
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.image-popup .popup-content {
+  position: relative;
+  max-width: 90%; /* Adjust for smaller devices */
+  max-height: 90%;
+  border-radius: 8px;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px; /* Add padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Image */
+.image-popup img {
+  width: 30%; /* Scale image to fit container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional, for rounded corners */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5f5f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  background: #ff3b3b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .image-popup .popup-content {
+    max-width: 80%; /* Smaller width for tablets */
+    max-height: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-popup .popup-content {
+    max-width: 95%; /* Smaller width for mobile devices */
+    max-height: 95%;
+  }
+
+  .close-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}

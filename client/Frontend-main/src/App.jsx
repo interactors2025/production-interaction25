@@ -15,20 +15,31 @@ import Schedule from "./Components/Schedule/Schedule";
 import DeveloperList from "./Components/DeveloperList/DeveloperList";
 import Teacher from "./Components/Teachers/Teacher";
 import OtherForm from "./Components/others/form";
+import AdminLogin from "./Components/AdminDashboard/LoginAdmin";
+import Dashboard from "./Components/AdminDashboard/Dashboard";
+import ProtectedRoute from "./Components/AdminDashboard/ProtectedRoute";
 
 const Layout = ({ children }) => {
   const location = useLocation();
 
   const isRegisterPage = location.pathname === "/register";
   const isLoginPage = location.pathname === "/login";
+  const isAdminLogin = location.pathname === "/adminlogin";
+  const isAdminDashboard = location.pathname === "/admindashboard";
 
   return (
     <>
       {!isRegisterPage && !isLoginPage}
-      {!isRegisterPage && !isLoginPage && <Navbar />}
+      {!isRegisterPage &&
+        !isLoginPage &&
+        !isAdminLogin &&
+        !isAdminDashboard && <Navbar />}
 
       {children}
-      {<Footer />}
+      {!isRegisterPage &&
+        !isLoginPage &&
+        !isAdminLogin &&
+        !isAdminDashboard && <Footer />}
     </>
   );
 };
@@ -46,6 +57,15 @@ const App = () => {
           <Route path="/DeveloperList" element={<DeveloperList />} />
           <Route path="/Teacher" element={<Teacher />} />
           <Route path="/form" element={<OtherForm />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route
+            path="/admindashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Layout>
     </Router>
