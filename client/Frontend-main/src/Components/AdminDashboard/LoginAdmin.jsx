@@ -12,8 +12,8 @@ const AdminLogin = () => {
     e.preventDefault();
 
     // Fetch values from .env
-    const staticUsername = `${import.meta.env.VITE_APP_ADMIN_USERNAME}`;
-    const staticPassword = `${import.meta.env.VITE_APP_ADMIN_PASSWORD}`;
+    const staticUsername = `interactorsAdmin`;
+    const staticPassword = `pass@word`;
 
     // Validate credentials
     if (username === staticUsername && password === staticPassword) {
