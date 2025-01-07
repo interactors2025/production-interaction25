@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
+  const [count, setCount] = useState([]);
+  const [amount, setFetchAmount] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null); // For image popup
 
   // Fetch users from the API
   useEffect(() => {
     fetchUsers();
+    fetchCount();
+    fetchAmount();
   }, []);
 
   const fetchUsers = async () => {
@@ -27,6 +30,33 @@ const UsersPage = () => {
       console.error("Error fetching users:", error);
     }
   };
+  const fetchCount = async () => {
+    try {
+      const response = await fetch(
+        "https://nci25.moderncollegegk.in/api/v1/count"
+      );
+      if (!response.ok) throw new Error("Failed to fetch users");
+
+      const data = await response.json();
+      setCount(data.payload.staffCount);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
+  const fetchAmount = async () => {
+    try {
+      const response = await fetch(
+        "https://nci25.moderncollegegk.in/api/v1/amount"
+      );
+      if (!response.ok) throw new Error("Failed to fetch users");
+
+      const data = await response.json();
+      setFetchAmount(data.payload.totalAmount);
+      console.log("Amount Date", data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  };
 
   const handleImageClick = (imageUrl) => {
     setSelectedImage(imageUrl); // Set the image to display in the popup
@@ -38,7 +68,26 @@ const UsersPage = () => {
   return (
     <div className="container mt-5">
       <h1 className="mb-4">Users</h1>
-
+      <div className="d-flex gap-3">
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Participants</h5>
+            <h2 class="card-text">{users.length}</h2>
+          </div>
+        </div>
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Staff</h5>
+            <h2 class="card-text">{count}</h2>
+          </div>
+        </div>
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Amount</h5>
+            <h2 class="card-text">{amount}</h2>
+          </div>
+        </div>
+      </div>
       <div className="table-responsive">
         <table className="table table-bordered">
           <thead>
