@@ -25,6 +25,10 @@ const Dashboard = () => {
     window.location.href = "/adminlogin"; // Redirect to login page
   };
 
+  const toggleForm = (status) => {
+    setIsFormOpen(status);
+  };
+
   return (
     <div className="dashboard bg-white">
       {/* Main Content */}

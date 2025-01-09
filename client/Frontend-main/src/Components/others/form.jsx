@@ -22,7 +22,6 @@ import qr4 from "../../assets/img/400.png";
 import qr5 from "../../assets/img/500.png";
 import qr6 from "../../assets/img/600.png";
 import qr7 from "../../assets/img/700.png";
-//import qr8 from "../../assets/img/800.png";
 
 export default function OtherForm() {
   const qrCodes = {
@@ -33,7 +32,6 @@ export default function OtherForm() {
     500: qr5,
     600: qr6,
     700: qr7,
-    //800: qr8,
   };
 
   const [formData, setFormData] = useState({
@@ -158,7 +156,7 @@ export default function OtherForm() {
 
       if (response.ok) {
         const data = await response.json();
-        alert("Form submitted successfully!" ,data);
+        alert("Form submitted successfully!", data);
         setIsSubmitting(false);
         window.location.reload();
       } else {
@@ -183,7 +181,7 @@ export default function OtherForm() {
         borderRadius: 2,
       }}
     >
-     <CancelButton/>
+      <CancelButton />
       <Box component="form" onSubmit={handleSubmit}>
         <Typography variant="h4" textAlign="center" gutterBottom>
           Registration Form
@@ -322,7 +320,6 @@ export default function OtherForm() {
               <Grid item xs={12}>
                 <Typography variant="subtitle1">Events:</Typography>
                 <FormGroup row>
-                  
                   <FormControlLabel
                     control={
                       <Checkbox
@@ -450,7 +447,9 @@ export default function OtherForm() {
             <Grid item xs={12}>
               <Typography variant="subtitle1">Events:</Typography>
 
-              <label htmlFor="nationalConference">National Conference (Research Paper's / Posters / PPT's / Idea / Abstract)              
+              <label htmlFor="nationalConference">
+                National Conference (Research Paper's / Posters / PPT's / Idea /
+                Abstract)
               </label>
             </Grid>
           )}
