@@ -192,12 +192,6 @@ const Teacher = () => {
             "https://res.cloudinary.com/delnxjp38/image/upload/v1735146707/Sakshi_Jagtap_vnrllg.png",
           no: 8788452433,
         },
-        {
-          name: "Std. Swarali Junavane",
-          image:
-            "https://res.cloudinary.com/delnxjp38/image/upload/v1735146718/Swarali_Junavane_uqj7rh.png",
-          no: 8010783796,
-        },
       ],
     },
   ];
