@@ -349,6 +349,21 @@ export default function OtherForm() {
                     }
                     label="Media Splash (Day1)"
                   />
+                  <FormControlLabel
+                    disabled={true}
+                    control={
+                      <Checkbox
+                        value="Gamer Strike"
+                        checked={formData.Events.includes("Gamer Strike")}
+                        onChange={handleCheckboxChange}
+                        disabled={
+                          disableEvents &&
+                          !formData.Events.includes("Gamer Strike")
+                        }
+                      />
+                    }
+                    label="Gamer Strike (Day 1)"
+                  />
 
                   <FormControlLabel
                     control={
