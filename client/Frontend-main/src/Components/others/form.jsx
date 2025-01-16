@@ -350,6 +350,7 @@ export default function OtherForm() {
                     label="Media Splash (Day1)"
                   />
                   <FormControlLabel
+                    disabled
                     control={
                       <Checkbox
                         value="Gamer Strike"
