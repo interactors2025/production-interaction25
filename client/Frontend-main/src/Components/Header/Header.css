@@ -5,7 +5,9 @@
   padding: 20px 0;
   text-align: center;
 }
-
+marquee {
+  color: antiquewhite;
+}
 .header-container {
   width: 90%;
   margin: 0 auto;

@@ -10,6 +10,10 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header-container">
+          <marquee width="100%" direction="left" height="50px">
+            All participants must bring their College ID Card, Aadhaar Card and
+            PAN Card on January 20th and 21st for the Events.
+          </marquee>
           <div className="logos">
             <img src={img1} alt="Logo1" className="logo" />
             <img src={img2} alt="Logo2" className="logo" />
