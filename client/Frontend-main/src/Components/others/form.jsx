@@ -171,358 +171,360 @@ export default function OtherForm() {
   };
 
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        maxWidth: { xs: "90%", sm: "80%", md: "600px" },
-        mx: "auto",
-        p: 3,
-        backgroundColor: "white",
-        borderRadius: 2,
-      }}
-    >
-      <CancelButton />
-      <Box component="form" onSubmit={handleSubmit}>
-        <Typography variant="h4" textAlign="center" gutterBottom>
-          Registration Form
-        </Typography>
+    // <Paper
+    //   elevation={3}
+    //   sx={{
+    //     maxWidth: { xs: "90%", sm: "80%", md: "600px" },
+    //     mx: "auto",
+    //     p: 3,
+    //     backgroundColor: "white",
+    //     borderRadius: 2,
+    //   }}
+    // >
+    //   <CancelButton />
+    //   <Box component="form" onSubmit={handleSubmit}>
+    //     <Typography variant="h4" textAlign="center" gutterBottom>
+    //       Registration Form
+    //     </Typography>
 
-        {serverError && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            {serverError}
-          </Alert>
-        )}
+    //     {serverError && (
+    //       <Alert severity="error" sx={{ mb: 2 }}>
+    //         {serverError}
+    //       </Alert>
+    //     )}
 
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              label="First Name"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.firstName}
-              helperText={errors.firstName}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              label="Last Name"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.lastName}
-              helperText={errors.lastName}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="Email"
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.email}
-              helperText={errors.email}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="Mobile"
-              type="tel"
-              name="mobile"
-              value={formData.mobile}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.mobile}
-              helperText={errors.mobile}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              label="College Name"
-              name="collegeName"
-              value={formData.collegeName}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.collegeName}
-              helperText={errors.collegeName}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              label="Country"
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.country}
-              helperText={errors.country}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              label="State"
-              name="state"
-              value={formData.state}
-              onChange={handleChange}
-              fullWidth
-              required
-              error={!!errors.state}
-              helperText={errors.state}
-            />
-          </Grid>
+    //     <Grid container spacing={2}>
+    //       <Grid item xs={12} sm={6}>
+    //         <TextField
+    //           label="First Name"
+    //           name="firstName"
+    //           value={formData.firstName}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.firstName}
+    //           helperText={errors.firstName}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12} sm={6}>
+    //         <TextField
+    //           label="Last Name"
+    //           name="lastName"
+    //           value={formData.lastName}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.lastName}
+    //           helperText={errors.lastName}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12}>
+    //         <TextField
+    //           label="Email"
+    //           type="email"
+    //           name="email"
+    //           value={formData.email}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.email}
+    //           helperText={errors.email}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12}>
+    //         <TextField
+    //           label="Mobile"
+    //           type="tel"
+    //           name="mobile"
+    //           value={formData.mobile}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.mobile}
+    //           helperText={errors.mobile}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12}>
+    //         <TextField
+    //           label="College Name"
+    //           name="collegeName"
+    //           value={formData.collegeName}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.collegeName}
+    //           helperText={errors.collegeName}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12} sm={6}>
+    //         <TextField
+    //           label="Country"
+    //           name="country"
+    //           value={formData.country}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.country}
+    //           helperText={errors.country}
+    //         />
+    //       </Grid>
+    //       <Grid item xs={12} sm={6}>
+    //         <TextField
+    //           label="State"
+    //           name="state"
+    //           value={formData.state}
+    //           onChange={handleChange}
+    //           fullWidth
+    //           required
+    //           error={!!errors.state}
+    //           helperText={errors.state}
+    //         />
+    //       </Grid>
 
-          <Grid item xs={12}>
-            <Typography variant="subtitle1">User Type:</Typography>
-            <RadioGroup
-              row
-              name="role"
-              value={formData.role}
-              onChange={handleChange}
-            >
-              <FormControlLabel
-                value="student"
-                control={<Radio />}
-                label="Student"
-              />
-              <FormControlLabel
-                value="teacher"
-                control={<Radio />}
-                label="Teacher"
-              />
-            </RadioGroup>
-          </Grid>
+    //       <Grid item xs={12}>
+    //         <Typography variant="subtitle1">User Type:</Typography>
+    //         <RadioGroup
+    //           row
+    //           name="role"
+    //           value={formData.role}
+    //           onChange={handleChange}
+    //         >
+    //           <FormControlLabel
+    //             value="student"
+    //             control={<Radio />}
+    //             label="Student"
+    //           />
+    //           <FormControlLabel
+    //             value="teacher"
+    //             control={<Radio />}
+    //             label="Teacher"
+    //           />
+    //         </RadioGroup>
+    //       </Grid>
 
-          {formData.role === "student" && (
-            <>
-              <Grid item xs={12}>
-                <Typography variant="subtitle1">Education Level:</Typography>
-                <RadioGroup
-                  row
-                  name="section"
-                  value={formData.section}
-                  onChange={handleChange}
-                >
-                  <FormControlLabel value="UG" control={<Radio />} label="UG" />
-                  <FormControlLabel value="PG" control={<Radio />} label="PG" />
-                </RadioGroup>
-              </Grid>
+    //       {formData.role === "student" && (
+    //         <>
+    //           <Grid item xs={12}>
+    //             <Typography variant="subtitle1">Education Level:</Typography>
+    //             <RadioGroup
+    //               row
+    //               name="section"
+    //               value={formData.section}
+    //               onChange={handleChange}
+    //             >
+    //               <FormControlLabel value="UG" control={<Radio />} label="UG" />
+    //               <FormControlLabel value="PG" control={<Radio />} label="PG" />
+    //             </RadioGroup>
+    //           </Grid>
 
-              <Grid item xs={12}>
-                <Typography variant="subtitle1">Events:</Typography>
-                <FormGroup row>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Brain Battle"
-                        checked={formData.Events.includes("Brain Battle")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Brain Battle")
-                        }
-                      />
-                    }
-                    label="Brain Battle (Day1)"
-                  />
+    //           <Grid item xs={12}>
+    //             <Typography variant="subtitle1">Events:</Typography>
+    //             <FormGroup row>
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Brain Battle"
+    //                     checked={formData.Events.includes("Brain Battle")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Brain Battle")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Brain Battle (Day1)"
+    //               />
 
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Media Splash"
-                        checked={formData.Events.includes("Media Splash")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Media Splash")
-                        }
-                      />
-                    }
-                    label="Media Splash (Day1)"
-                  />
-                  <FormControlLabel
-                    disabled={true}
-                    control={
-                      <Checkbox
-                        value="Gamer Strike"
-                        checked={formData.Events.includes("Gamer Strike")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Gamer Strike")
-                        }
-                      />
-                    }
-                    label="Gamer Strike (Day 1)"
-                  />
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Media Splash"
+    //                     checked={formData.Events.includes("Media Splash")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Media Splash")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Media Splash (Day1)"
+    //               />
+    //               <FormControlLabel
+    //                 disabled={true}
+    //                 control={
+    //                   <Checkbox
+    //                     value="Gamer Strike"
+    //                     checked={formData.Events.includes("Gamer Strike")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Gamer Strike")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Gamer Strike (Day 1)"
+    //               />
 
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Wisdom War"
-                        checked={formData.Events.includes("Wisdom War")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Wisdom War")
-                        }
-                      />
-                    }
-                    label="Wisdom War (Day1)"
-                  />
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Wisdom War"
+    //                     checked={formData.Events.includes("Wisdom War")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Wisdom War")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Wisdom War (Day1)"
+    //               />
 
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Hack in Dark"
-                        checked={formData.Events.includes("Hack in Dark")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Hack in Dark")
-                        }
-                      />
-                    }
-                    label="Hack In The Dark (Day2)"
-                  />
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Hack in Dark"
+    //                     checked={formData.Events.includes("Hack in Dark")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Hack in Dark")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Hack In The Dark (Day2)"
+    //               />
 
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Spark The Idea"
-                        checked={formData.Events.includes("Spark The Idea")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Spark The Idea")
-                        }
-                      />
-                    }
-                    label="Spark The Idea (Day2)"
-                  />
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Spark The Idea"
+    //                     checked={formData.Events.includes("Spark The Idea")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Spark The Idea")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Spark The Idea (Day2)"
+    //               />
 
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        value="Gold Rush"
-                        checked={formData.Events.includes("Gold Rush")}
-                        onChange={handleCheckboxChange}
-                        disabled={
-                          disableEvents &&
-                          !formData.Events.includes("Gold Rush")
-                        }
-                      />
-                    }
-                    label="Gold Rush (Day2)"
-                  />
-                </FormGroup>
-                {errors.Events && (
-                  <Typography color="error" variant="body2">
-                    {errors.Events}
-                  </Typography>
-                )}
-              </Grid>
+    //               <FormControlLabel
+    //                 control={
+    //                   <Checkbox
+    //                     value="Gold Rush"
+    //                     checked={formData.Events.includes("Gold Rush")}
+    //                     onChange={handleCheckboxChange}
+    //                     disabled={
+    //                       disableEvents &&
+    //                       !formData.Events.includes("Gold Rush")
+    //                     }
+    //                   />
+    //                 }
+    //                 label="Gold Rush (Day2)"
+    //               />
+    //             </FormGroup>
+    //             {errors.Events && (
+    //               <Typography color="error" variant="body2">
+    //                 {errors.Events}
+    //               </Typography>
+    //             )}
+    //           </Grid>
 
-              <Grid item xs={12}>
-                <TextField
-                  label="Amount"
-                  name="amount"
-                  value={formData.amount}
-                  InputProps={{ readOnly: true }}
-                  fullWidth
-                />
-              </Grid>
-            </>
-          )}
+    //           <Grid item xs={12}>
+    //             <TextField
+    //               label="Amount"
+    //               name="amount"
+    //               value={formData.amount}
+    //               InputProps={{ readOnly: true }}
+    //               fullWidth
+    //             />
+    //           </Grid>
+    //         </>
+    //       )}
 
-          {formData.role === "teacher" && (
-            <Grid item xs={12}>
-              <Typography variant="subtitle1">Events:</Typography>
+    //       {formData.role === "teacher" && (
+    //         <Grid item xs={12}>
+    //           <Typography variant="subtitle1">Events:</Typography>
 
-              <label htmlFor="nationalConference">
-                National Conference (Research Paper's / Posters / PPT's / Idea /
-                Abstract)
-              </label>
-            </Grid>
-          )}
-          <Grid item xs={12}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={disableEvents}
-                  onChange={handleConfirmChange}
-                />
-              }
-              label="Confirm selection"
-            />
-          </Grid>
-          {qrCode && (
-            <Grid
-              item
-              xs={12}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                mt: 2,
-              }}
-            >
-              <Box
-                sx={{
-                  width: "300px",
-                  height: "300px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  border: "1px solid #ddd",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  src={qrCode}
-                  alt="QR Code"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </Box>
-            </Grid>
-          )}
+    //           <label htmlFor="nationalConference">
+    //             National Conference (Research Paper's / Posters / PPT's / Idea /
+    //             Abstract)
+    //           </label>
+    //         </Grid>
+    //       )}
+    //       <Grid item xs={12}>
+    //         <FormControlLabel
+    //           control={
+    //             <Checkbox
+    //               checked={disableEvents}
+    //               onChange={handleConfirmChange}
+    //             />
+    //           }
+    //           label="Confirm selection"
+    //         />
+    //       </Grid>
+    //       {qrCode && (
+    //         <Grid
+    //           item
+    //           xs={12}
+    //           sx={{
+    //             display: "flex",
+    //             justifyContent: "center",
+    //             alignItems: "center",
+    //             mt: 2,
+    //           }}
+    //         >
+    //           <Box
+    //             sx={{
+    //               width: "300px",
+    //               height: "300px",
+    //               display: "flex",
+    //               justifyContent: "center",
+    //               alignItems: "center",
+    //               border: "1px solid #ddd",
+    //               borderRadius: "8px",
+    //               overflow: "hidden",
+    //             }}
+    //           >
+    //             <img
+    //               src={qrCode}
+    //               alt="QR Code"
+    //               style={{ width: "100%", height: "100%" }}
+    //             />
+    //           </Box>
+    //         </Grid>
+    //       )}
 
-          <Grid item xs={12}>
-            <label>Upload Transaction Screenshot (Max size is 1MB)</label>
-            <input
-              label="Upload Image"
-              type="file"
-              name="Image"
-              onChange={handleChange}
-              required
-            />
-          </Grid>
+    //       <Grid item xs={12}>
+    //         <label>Upload Transaction Screenshot (Max size is 1MB)</label>
+    //         <input
+    //           label="Upload Image"
+    //           type="file"
+    //           name="Image"
+    //           onChange={handleChange}
+    //           required
+    //         />
+    //       </Grid>
 
-          <Grid item xs={12}>
-            <Box mt={3}>
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                fullWidth
-                disabled={isSubmitting}
-              >
-                Submit
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
-      </Box>
-    </Paper>
+    //       <Grid item xs={12}>
+    //         <Box mt={3}>
+    //           <Button
+    //             type="submit"
+    //             variant="contained"
+    //             color="primary"
+    //             fullWidth
+    //             disabled={isSubmitting}
+    //           >
+    //             Submit
+    //           </Button>
+    //         </Box>
+    //       </Grid>
+    //     </Grid>
+    //   </Box>
+    // </Paper>
+
+    <h1 style={{ textAlign: "center" }}>Registrtions are Closed</h1>
   );
 }
