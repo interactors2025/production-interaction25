@@ -525,6 +525,6 @@ export default function OtherForm() {
     //   </Box>
     // </Paper>
 
-    <h1 style={{ textAlign: "center" }}>Registrtions are Closed</h1>
+    <h1 style={{ textAlign: "center" }}>Registrations are Closed</h1>
   );
 }
