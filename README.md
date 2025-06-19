@@ -1,5 +1,4 @@
-# production-interaction25
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/interactors2025/production-interaction25)
+
 
 ## Overview
 
